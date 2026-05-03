@@ -7,6 +7,7 @@ import { CategoryGrid } from '@/features/home/components/CategoryGrid';
 import { StealHerLooks } from '@/features/home/components/StealHerLooks';
 import { EventSection } from '@/features/home/components/EventSection';
 import { OutletMap } from '@/features/home/components/OutletMap';
+import { FeaturesBar } from '@/features/home/components/FeaturesBar';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -34,6 +35,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <StealHerLooks />
       <EventSection />
       <OutletMap />
+      <FeaturesBar />
     </main>
   );
 }

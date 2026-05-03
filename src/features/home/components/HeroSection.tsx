@@ -5,14 +5,7 @@ import { getHomeContent } from '@/lib/content/provider';
 import { ChevronLeftIcon, ChevronRightIcon } from '@/components/ui/Icon';
 
 export function HeroSection() {
-  const content = getHomeContent().hero;
-
-  // Simulated Carousel Slides from CMS
-  const slides = [
-    content.backgroundImage, 
-    content.backgroundImage, // Slide 2
-    content.backgroundImage, // Slide 3
-  ];
+  const slides = getHomeContent().hero;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -45,41 +38,36 @@ export function HeroSection() {
         />
       ))}
 
-      {/* Navigation Arrows */}
-      <div className="absolute inset-y-0 left-4 md:left-12 flex items-center z-20">
+      {/* Navigation Arrows - Minimalist Naked Style */}
+      <div className="absolute inset-y-0 left-8 md:left-12 flex items-center z-20">
         <button 
           onClick={prevSlide}
-          className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/40 hover:bg-white/60 flex items-center justify-center text-neutral-800 transition-colors backdrop-blur-sm opacity-0 group-hover:opacity-100 duration-300"
+          className="text-white/40 hover:text-white transition-all duration-500 hover:-translate-x-1"
           aria-label="Previous slide"
         >
-          <ChevronLeftIcon className="w-6 h-6" />
+          <ChevronLeftIcon className="w-10 h-10 md:w-12 md:h-12 stroke-[1px]" />
         </button>
       </div>
       
-      <div className="absolute inset-y-0 right-4 md:right-12 flex items-center z-20">
+      <div className="absolute inset-y-0 right-8 md:right-12 flex items-center z-20">
         <button 
           onClick={nextSlide}
-          className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/40 hover:bg-white/60 flex items-center justify-center text-neutral-800 transition-colors backdrop-blur-sm opacity-0 group-hover:opacity-100 duration-300"
+          className="text-white/40 hover:text-white transition-all duration-500 hover:translate-x-1"
           aria-label="Next slide"
         >
-          <ChevronRightIcon className="w-6 h-6" />
+          <ChevronRightIcon className="w-10 h-10 md:w-12 md:h-12 stroke-[1px]" />
         </button>
       </div>
 
-      {/* Pagination Dots */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            aria-label={`Go to slide ${index + 1}`}
-            className={`rounded-full transition-all duration-300 ${
-              index === currentIndex 
-                ? 'w-8 h-2.5 bg-white shadow-sm' 
-                : 'w-2.5 h-2.5 bg-white/60 hover:bg-white/80 shadow-sm'
-            }`}
-          />
-        ))}
+      {/* Editorial Pagination - Fraction Style (01 / 03) */}
+      <div className="absolute bottom-12 right-12 md:right-20 z-20 flex items-center gap-4 text-white font-heading tracking-[0.3em]">
+        <span className="text-xl md:text-2xl font-bold">
+          {String(currentIndex + 1).padStart(2, '0')}
+        </span>
+        <div className="w-12 h-px bg-white/40" />
+        <span className="text-sm md:text-base text-white/60">
+          {String(slides.length).padStart(2, '0')}
+        </span>
       </div>
     </section>
   );

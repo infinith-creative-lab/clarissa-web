@@ -1,56 +1,204 @@
+"use client";
+
 import { useTranslations } from 'next-intl';
 import { getHomeContent } from '@/lib/content/provider';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/ui/Button';
-import { Link } from '@/lib/i18n/navigation';
+import { useState, useEffect, useRef, useMemo } from 'react';
+import { DesignAccents } from '@/components/ui/DesignAccents';
+
+// Import local HIGH-RESOLUTION GeoJSON for Java
+import javaHighRes from '@/lib/map/java-highres.json';
+
+/**
+ * Enterprise-Grade Counter Component
+ */
+function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
+  const [count, setCount] = useState(1);
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.1 }
+    );
+    if (elementRef.current) observer.observe(elementRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      setCount(Math.floor(progress * (end - 1) + 1));
+      if (progress < 1) window.requestAnimationFrame(step);
+    };
+    window.requestAnimationFrame(step);
+  }, [isVisible, end, duration]);
+
+  return <span ref={elementRef}>{count}</span>;
+}
 
 export function OutletMap() {
   const t = useTranslations('outlets');
   const { outletStats } = getHomeContent();
+  const [hoveredStore, setHoveredStore] = useState<string | null>(null);
+
+  // Map Projection Config - Optimized Scale
+  const mapConfig = {
+    minLng: 104.5,
+    maxLng: 115.5,
+    minLat: -9.2,
+    maxLat: -5.5,
+    width: 1000,
+    height: 400
+  };
+
+  // Convert Lat/Lng to SVG X/Y
+  const project = (lng: number, lat: number) => {
+    const x = ((lng - mapConfig.minLng) / (mapConfig.maxLng - mapConfig.minLng)) * mapConfig.width;
+    const y = mapConfig.height - ((lat - mapConfig.minLat) / (mapConfig.maxLat - mapConfig.minLat)) * mapConfig.height;
+    return { x, y };
+  };
+
+  // Pre-calculate SVG paths for the map
+  const mapPaths = useMemo(() => {
+    return javaHighRes.features.map((feature: any, fIdx: number) => {
+      const geometry = feature.geometry;
+      if (geometry.type === "MultiPolygon") {
+        return geometry.coordinates.map((polygon: any, pIdx: number) => {
+          // Filter out small stray islands in the far west
+          const isStrayInWest = polygon[0].some((c: number[]) => c[0] < 105.1 && c[1] > -6.5);
+          if (isStrayInWest) return null;
+
+          return (
+            <path
+              key={`feature-${fIdx}-poly-${pIdx}`}
+              d={polygon[0].map((coord: number[], cIdx: number) => {
+                const { x, y } = project(coord[0], coord[1]);
+                return `${cIdx === 0 ? 'M' : 'L'} ${x.toFixed(2)} ${y.toFixed(2)}`;
+              }).join(' ') + ' Z'}
+              fill="var(--color-brand-100)"
+              opacity={0.6}
+              stroke="var(--color-brand-200)"
+              strokeWidth="0.5"
+              className="transition-all duration-500 hover:fill-brand-200 hover:opacity-100"
+            />
+          );
+        });
+      }
+      return null;
+    });
+  }, []);
 
   return (
-    <section className="section-padding bg-brand-50 relative overflow-hidden">
+    <section className="relative py-24 md:py-48 bg-brand-50 overflow-hidden">
       <Container className="relative z-10">
-        <div className="text-center mb-8">
-          <SectionHeading className="mb-4 text-brand-900">
+        <div className="max-w-4xl mx-auto text-center mb-28">
+          <div className="inline-block text-[10px] font-bold text-brand-600 tracking-[0.4em] uppercase mb-4 animate-in fade-in slide-in-from-bottom-2 duration-700">
+            {t('heading_sub') || 'Find Our Store'}
+          </div>
+          <h2 className="text-4xl md:text-7xl font-heading font-bold tracking-[0.1em] text-neutral-900 mb-8 uppercase leading-tight">
             {t('heading')}
-          </SectionHeading>
+          </h2>
+          <div className="w-16 h-1 bg-brand-500 mx-auto rounded-full" />
         </div>
 
-        <div className="relative w-full max-w-3xl mx-auto h-[300px] md:h-[400px] mb-12 flex justify-center items-center">
-          {/* Fallback map graphic styling matching the design */}
-          <div className="w-full h-full text-brand-400 flex justify-center items-center">
-             <div className="w-full max-w-2xl bg-brand-200/50 rounded-full blur-3xl absolute inset-0 m-auto h-[200px]" />
-             <svg viewBox="0 0 800 300" className="w-full h-full fill-brand-400 relative z-10">
-               {/* Simplified Indonesia Map Path placeholder */}
-               <path d="M100,150 Q200,100 300,160 T500,180 T700,150 L680,180 Q600,220 500,200 T300,220 T150,180 Z" />
-             </svg>
+        {/* Pure SVG Map - Slightly Reduced and Nuanced */}
+        <div className="relative w-full max-w-5xl mx-auto mb-36">
+          <div className="w-full h-auto overflow-visible relative">
+            <svg
+              viewBox={`0 0 ${mapConfig.width} ${mapConfig.height}`}
+              className="w-full h-full"
+            >
+              <g className="animate-in fade-in zoom-in-95 duration-1000">{mapPaths}</g>
+
+              {outletStats.stores.map((store) => {
+                const { x, y } = project(store.lng || 110, store.lat || -7);
+                return (
+                  <g
+                    key={store.id}
+                    transform={`translate(${x}, ${y})`}
+                    className="cursor-pointer group"
+                    onMouseEnter={() => setHoveredStore(store.id)}
+                    onMouseLeave={() => setHoveredStore(null)}
+                  >
+                    {/* Ripple Effect on Hover */}
+                    <circle r={12} fill="var(--color-brand-500)" opacity={0} className="transition-all duration-300 group-hover:opacity-10 animate-pulse" />
+
+                    {/* Teardrop Pin - Refined Style */}
+                    <g transform="translate(-10, -22)" className="transition-all duration-500 group-hover:-translate-y-1">
+                      <path
+                        d="M10 0C4.48 0 0 4.48 0 10c0 7.5 10 16.67 10 16.67S20 17.5 20 10c0-5.52-4.48-10-10-10z"
+                        fill={hoveredStore === store.id ? "#000" : "#222"}
+                        className="transition-colors duration-300"
+                      />
+                      <circle cx="10" cy="10" r="3.5" fill="#FFF" />
+                    </g>
+                  </g>
+                );
+              })}
+            </svg>
           </div>
+
+          {/* Luxury Floating Tooltip */}
+          {outletStats.stores.map((store) => {
+            const { x, y } = project(store.lng || 110, store.lat || -7);
+            return hoveredStore === store.id && (
+              <div
+                key={`tooltip-${store.id}`}
+                className="absolute p-6 bg-white/95 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.08)] z-50 pointer-events-none rounded-2xl w-64 border border-white animate-in fade-in zoom-in slide-in-from-bottom-4 duration-300"
+                style={{
+                  left: `${(x / mapConfig.width) * 100}%`,
+                  top: `${(y / mapConfig.height) * 100}%`,
+                  transform: 'translate(-50%, -140%)'
+                }}
+              >
+                <div className="text-[10px] font-bold text-brand-600 tracking-[0.3em] uppercase mb-2">{store.city}</div>
+                <div className="text-base font-heading font-bold text-neutral-900 uppercase mb-3 tracking-wide leading-tight border-b border-brand-50 pb-2">
+                  {store.name}
+                </div>
+                <div className="text-[11px] text-neutral-500 leading-relaxed font-medium pt-1">
+                  {store.address}
+                </div>
+                <div className="absolute top-[calc(100%-6px)] left-1/2 -translate-x-1/2 w-3 h-3 bg-white/95 backdrop-blur-md rotate-45 border-r border-b border-white" />
+              </div>
+            )
+          })}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-8 text-center">
-          <div>
-            <div className="font-heading font-bold text-5xl text-brand-600 mb-2">{outletStats.outletCount}</div>
-            <div className="font-label text-brand-900 uppercase tracking-widest">{t('outletCount')}</div>
+        {/* Refined Stats Row - Senuansa dengan Category/Event Cards */}
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 bg-white/60 backdrop-blur-sm p-2 rounded-[3rem] border border-white/80 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.03)]">
+            <div className="text-center py-12 px-8 border-neutral-100 md:border-r">
+              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-2 tracking-tighter">
+                <Counter end={outletStats.outletCount} />
+              </div>
+              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-400 uppercase">{t('outletCount')}</div>
+            </div>
+            <div className="text-center py-12 px-8 border-neutral-100 md:border-r">
+              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-2 tracking-tighter">
+                <Counter end={outletStats.cityCount} />
+              </div>
+              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-400 uppercase">{t('cityCount')}</div>
+            </div>
+            <div className="text-center py-12 px-8">
+              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-2 tracking-tighter">
+                <Counter end={outletStats.provinceCount} />
+              </div>
+              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-400 uppercase">{t('provinceCount')}</div>
+            </div>
           </div>
-          <div>
-            <div className="font-heading font-bold text-5xl text-brand-600 mb-2">{outletStats.cityCount}</div>
-            <div className="font-label text-brand-900 uppercase tracking-widest">{t('cityCount')}</div>
+          <div className="mt-24 text-center space-y-6">
+            <div className="w-16 h-px bg-brand-200 mx-auto" />
+            <p className="text-[11px] tracking-[0.4em] font-bold text-neutral-400 uppercase leading-relaxed max-w-xl mx-auto">
+              {t('openHours')}
+            </p>
           </div>
-          <div>
-            <div className="font-heading font-bold text-5xl text-brand-600 mb-2">{outletStats.provinceCount}</div>
-            <div className="font-label text-brand-900 uppercase tracking-widest">{t('provinceCount')}</div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <p className="text-sm text-neutral-600 mb-6">{t('openHours')}</p>
-          <Link href="/outlets">
-            <Button variant="secondary" className="bg-brand-200 text-brand-800 hover:bg-brand-300">
-              {t('visitUs')}
-            </Button>
-          </Link>
         </div>
       </Container>
     </section>

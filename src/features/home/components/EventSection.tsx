@@ -1,48 +1,82 @@
 import { useTranslations } from 'next-intl';
 import { getHomeContent } from '@/lib/content/provider';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Container } from '@/components/layout/Container';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
 import { Link } from '@/lib/i18n/navigation';
+import { ArrowRightIcon } from '@/components/ui/Icon';
+import { DesignAccents } from '@/components/ui/DesignAccents';
 
 export function EventSection() {
   const t = useTranslations('events');
   const { events } = getHomeContent();
 
+  // Limit to 4 items as requested
+  const latestEvents = events.slice(0, 4);
+
   return (
-    <section className="section-padding bg-white">
+    <section className="relative pt-12 pb-24 md:pt-16 md:pb-36 bg-white overflow-hidden">
+      {/* Editorial Design Accents */}
+      <DesignAccents variant="editorial" letter="L" letterPosition="right" vPosition="bottom" />
+
       <Container>
-        <div className="text-center mb-12">
-          <SectionHeading className="mb-4 text-brand-900">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-[0.3em] uppercase text-neutral-900 mb-6">
             {t('heading')}
-          </SectionHeading>
+          </h2>
+          <div className="w-32 h-1 bg-brand-200 mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-          {events.map((event) => (
-            <Card key={event.id} className="flex flex-col sm:flex-row overflow-hidden border border-brand-100 shadow-none hover:shadow-card">
-              <div className="sm:w-1/3 aspect-square sm:aspect-auto relative bg-neutral-200">
-                <img src={event.image} alt={event.title} className="w-full h-full object-cover" loading="lazy" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-32">
+          {latestEvents.map((event) => (
+            <div key={event.id} className="group cursor-pointer flex flex-col h-full">
+              {/* Image Container */}
+              <div className="relative aspect-[4/5] overflow-hidden mb-6 bg-neutral-100 shrink-0">
+                <img 
+                  src={event.image} 
+                  alt={event.title} 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                  loading="lazy" 
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
               </div>
-              <div className="sm:w-2/3 p-6 flex flex-col justify-center">
-                <h3 className="font-heading font-bold text-xl text-brand-700 mb-2">{event.title}</h3>
-                <p className="text-sm text-neutral-600 mb-4">{event.description}</p>
-                <Link href={event.ctaLink} className="mt-auto">
-                  <Button variant="outline" size="sm" className="rounded-full">
-                    {t('readMore')}
-                  </Button>
-                </Link>
+
+              {/* Content */}
+              <div className="flex flex-col flex-grow px-2">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-[9px] tracking-[0.4em] font-bold text-brand-600 uppercase">
+                    {event.location}
+                  </span>
+                </div>
+                
+                <h3 className="font-heading font-bold text-lg md:text-xl text-neutral-900 tracking-wide leading-snug group-hover:text-brand-600 transition-colors duration-300 mb-4 min-h-[3.5rem] line-clamp-2">
+                  {event.title}
+                </h3>
+                
+                <p className="text-xs text-neutral-500 leading-relaxed font-medium line-clamp-3 mb-6 min-h-[3rem]">
+                  {event.description}
+                </p>
+
+                <div className="mt-auto pt-4">
+                  <Link href={event.ctaLink} className="inline-flex items-center gap-2 group/link">
+                    <span className="text-[10px] tracking-[0.3em] font-bold uppercase border-b border-neutral-900 pb-1 group-hover/link:text-brand-600 group-hover/link:border-brand-600 transition-all">
+                      {t('readMore')}
+                    </span>
+                    <ArrowRightIcon className="w-3 h-3 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
+                </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
         <div className="text-center">
-          <Link href="/events">
-            <Button variant="secondary" className="bg-brand-200 text-brand-800 hover:bg-brand-300">
-              {t('viewAll')}
-            </Button>
+          <Link href="/blog">
+            <button className="group relative inline-flex items-center gap-4 px-12 py-5 bg-neutral-900 text-white font-heading text-lg tracking-widest uppercase transition-all duration-500 hover:bg-brand-900 hover:pl-14 hover:pr-10">
+              <span className="relative z-10">{t('viewAll')}</span>
+              <ArrowRightIcon className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-2" />
+              
+              {/* Button Decorative Underline */}
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-brand-200 transition-all duration-500 group-hover:w-full" />
+            </button>
           </Link>
         </div>
       </Container>

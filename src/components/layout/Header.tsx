@@ -10,12 +10,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-brand-100 border-b border-brand-200 shadow-sm">
       <Container className="flex h-16 md:h-24 items-center justify-between">
-        
+
         {/* Left: Search Bar */}
         <div className="hidden md:flex flex-1 items-center">
           <div className="relative w-72">
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder={t('search')}
               className="w-full pl-4 pr-10 py-2.5 bg-white border border-brand-200 rounded text-sm focus:outline-none focus:ring-1 focus:ring-brand-300 shadow-sm"
             />
@@ -45,13 +45,13 @@ export function Header() {
           <div className="hidden md:flex items-center gap-2 cursor-pointer hover:text-brand-900 transition-colors uppercase">
             <StoreIcon className="w-4 h-4" /> {tHeader('storeLocation')} <ChevronDownIcon className="w-4 h-4" />
           </div>
-          
+
           {/* Mobile Actions */}
           <button className="p-2 hover:bg-brand-100 rounded-full md:hidden text-neutral-600" aria-label={t('search')}>
-             <SearchIcon className="w-5 h-5" />
+            <SearchIcon className="w-5 h-5" />
           </button>
           <button className="p-2 hover:bg-brand-100 rounded-full md:hidden text-neutral-600" aria-label={t('menu')}>
-             <MenuIcon className="w-5 h-5" />
+            <MenuIcon className="w-5 h-5" />
           </button>
         </div>
 

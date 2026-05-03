@@ -45,19 +45,37 @@ export interface EventItem {
   date?: string;
 }
 
+export interface StoreLocation {
+  id: string;
+  name: string;
+  address: string;
+  city: string;
+  x: number; // Percentage from left (0-100)
+  y: number; // Percentage from top (0-100)
+  lat?: number;
+  lng?: number;
+}
+
 export interface OutletStats {
   outletCount: number;
   cityCount: number;
   provinceCount: number;
-  mapImage: string;
+  stores: StoreLocation[];
+}
+
+export interface FeatureItem {
+  id: string;
+  nameKey: string;
+  icon?: string;
 }
 
 export interface HomePageContent {
-  hero: HeroBanner;
+  hero: string[];
   categories: Category[];
   looks: LookItem[];
   events: EventItem[];
   outletStats: OutletStats;
+  features: FeatureItem[];
 }
 
 export interface NavLink {

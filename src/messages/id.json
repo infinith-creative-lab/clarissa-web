@@ -39,13 +39,15 @@
     "cta": "Belanja Sekarang"
   },
   "categories": {
-    "heading": "PILIH GAYA KAMU",
-    "womens": "Fashion Wanita",
-    "mens": "Fashion Pria & Wanita",
-    "accessories": "Aksesoris",
-    "kids": "Kids & Maternity",
+    "heading": "CHOOSE YOUR STYLE",
+    "modestWear": "MODEST WEAR",
+    "hijab": "HIJAB COLLECTION",
+    "underwear": "UNDERWEAR",
+    "bagsAccessories": "BAGS & ACCESSORIES",
+    "footwear": "FOOTWEAR",
+    "kidsLifestyle": "KIDS & LIFESTYLE",
     "description": "Jelajahi pilihanmu tentukan sendiri gayamu",
-    "cta": "Lihat Katalog Yuk!"
+    "cta": "Cek Katalog Kami"
   },
   "looks": {
     "heading": "STEAL HER LOOKS",
@@ -57,46 +59,83 @@
     "readMore": "Baca selengkapnya"
   },
   "outlets": {
-    "heading": "Outlet Kami",
-    "outletCount": "Outlet",
-    "cityCount": "Kota",
-    "provinceCount": "Provinsi",
-    "description": "Clarissa hadir di berbagai kota untuk melayani kebutuhan fashion Anda.",
-    "openHours": "Buka setiap hari pukul 10:00 - 22:00 WIB.",
-    "visitUs": "Kunjungi Outlet Kami"
+    "heading": "OUTLET KAMI",
+    "heading_sub": "TEMUKAN OUTLET KAMI",
+    "outletCount": "OUTLET",
+    "cityCount": "KOTA",
+    "provinceCount": "PROVINSI",
+    "openHours": "Clarissa buka setiap hari pukul 08.00 – 21.00 WIB."
+  },
+  "features": {
+    "return": "Bisa Retur",
+    "payment": "Pembayaran Cepat",
+    "member": "Member Benefit",
+    "voucher": "Voucher and Gift"
   },
   "footer": {
-    "tagline": "No. 1 One Stop Shopping Experience in Indonesian",
-    "fashionTitle": "FASHION",
-    "beautyTitle": "BEAUTY",
-    "accessoriesTitle": "AKSESORIS & PERAWATAN",
-    "aboutTitle": "TENTANG CLARISSA",
-    "paymentTitle": "ONLINE PAYMENT",
-    "copyright": "© {year} Clarissa. All rights reserved.",
-    "fashionLinks": {
-      "women": "Pakaian Wanita",
-      "men": "Pakaian Pria",
-      "muslim": "Muslim Wear",
-      "bags": "Tas",
-      "shoes": "Sepatu & Sandal"
+    "tagline": "No. 1 One Stop Shopping Experience in Indonesia",
+    "followUs": "Ikuti Kami",
+    "socials": {
+      "instagram": "https://instagram.com/clarissaboutique",
+      "facebook": "https://facebook.com/clarissaboutique",
+      "twitter": "https://twitter.com/clarissa",
+      "tiktok": "https://tiktok.com/@clarissaboutique"
     },
-    "beautyLinks": {
-      "skincare": "Skincare",
-      "makeup": "Makeup",
-      "bodycare": "Body Care",
-      "haircare": "Hair Care"
+    "fashion": {
+      "title": "FASHION",
+      "items": {
+        "modest": "Modest Wear",
+        "hijab": "Hijab",
+        "underwear": "Underwear",
+        "bags": "Tas & Aksesori",
+        "footwear": "Alas Kaki",
+        "kids": "Anak & Gaya Hidup"
+      }
     },
-    "accessoriesLinks": {
-      "jewelry": "Perhiasan",
-      "watches": "Jam Tangan",
-      "glasses": "Kacamata",
-      "scarves": "Syal & Kerudung"
+    "beauty": {
+      "title": "BEAUTY",
+      "items": {
+        "skincare": "Perawatan Kulit",
+        "cosmetics": "Kosmetik",
+        "haircare": "Perawatan Rambut",
+        "bodycare": "Perawatan Tubuh"
+      }
     },
-    "aboutLinks": {
-      "story": "Cerita Kami",
-      "careers": "Karir",
-      "outlets": "Outlet",
-      "contact": "Hubungi Kami"
+    "customer": {
+      "title": "INFORMASI PELANGGAN",
+      "items": {
+        "events": "Acara & Artikel",
+        "faq": "FAQ"
+      }
+    },
+    "online": {
+      "title": "TOKO ONLINE",
+      "items": {
+        "shopee": "Shopee",
+        "tiktok": "TikTok Shop"
+      }
+    },
+    "about": {
+      "title": "TENTANG CLARISSA",
+      "items": {
+        "story": "Cerita Kami",
+        "locations": "Lokasi Toko"
+      }
+    },
+    "contact": {
+      "title": "KONTAK"
+    },
+    "member": {
+      "title": "JADILAH MEMBER",
+      "description": "Bergabunglah sekarang dan dapatkan potongan 50rb!",
+      "button": "GABUNG MEMBER"
+    },
+    "bottom": {
+      "terms": "Kebijakan Situs",
+      "privacy": "Kebijakan Privasi",
+      "cookies": "Pengaturan Cookie",
+      "copyright": "© 2026 Clarissa Boutique, Your Number 1 Stop Shopping Experience in Indonesia",
+      "madeBy": "Dibuat oleh Infinith Creative Lab"
     }
   },
   "about": {
