@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "title": "Clarissa — No. 1 One Stop Shopping Experience",
+    "description": "Temukan koleksi fashion, kecantikan, dan aksesoris terbaik di Clarissa. Belanja mudah, kualitas terjamin.",
+    "keywords": "fashion, kecantikan, aksesoris, belanja online, clarissa, toko fashion indonesia"
+  },
+  "nav": {
+    "home": "Beranda",
+    "allProducts": "Semua",
+    "fashion": "Fashion",
+    "beauty": "Beauty",
+    "accessories": "Aksesoris & Perawatan",
+    "about": "Tentang Clarissa",
+    "outlets": "Outlet",
+    "promo": "Promo",
+    "contact": "Hubungi Kami",
+    "blog": "Blog",
+    "search": "Cari produk...",
+    "cart": "Keranjang",
+    "account": "Akun",
+    "menu": "Menu"
+  },
+  "topBar": {
+    "phone": "+62 812 3456 7890",
+    "email": "info@clarissa.id",
+    "announcement1": "KOLEKSI TERBAIK",
+    "announcement2": "💖 DAPATKAN DISKON 10% & HADIAH GRATIS UNTUK PEMBELIAN PERTAMA. GUNAKAN KODE: 'CLARISSAID' SAAT CHECKOUT.",
+    "faq": "FAQ"
+  },
+  "header": {
+    "login": "MASUK",
+    "storeLocation": "LOKASI TOKO",
+    "subtitle": "NO.1 FASHION STORE"
+  },
+  "hero": {
+    "subtitle": "The New Essentials",
+    "title": "NEW BAG SERIES",
+    "badge": "NEW!",
+    "cta": "Belanja Sekarang"
+  },
+  "categories": {
+    "heading": "PILIH GAYA KAMU",
+    "womens": "Fashion Wanita",
+    "mens": "Fashion Pria & Wanita",
+    "accessories": "Aksesoris",
+    "kids": "Kids & Maternity",
+    "description": "Jelajahi pilihanmu tentukan sendiri gayamu",
+    "cta": "Lihat Katalog Yuk!"
+  },
+  "looks": {
+    "heading": "STEAL HER LOOKS",
+    "viewAll": "Lihat Semua"
+  },
+  "events": {
+    "heading": "EVENT KAMI",
+    "viewAll": "Lihat Semua Event Di Berbagai Kota!",
+    "readMore": "Baca selengkapnya"
+  },
+  "outlets": {
+    "heading": "Outlet Kami",
+    "outletCount": "Outlet",
+    "cityCount": "Kota",
+    "provinceCount": "Provinsi",
+    "description": "Clarissa hadir di berbagai kota untuk melayani kebutuhan fashion Anda.",
+    "openHours": "Buka setiap hari pukul 10:00 - 22:00 WIB.",
+    "visitUs": "Kunjungi Outlet Kami"
+  },
+  "footer": {
+    "tagline": "No. 1 One Stop Shopping Experience in Indonesian",
+    "fashionTitle": "FASHION",
+    "beautyTitle": "BEAUTY",
+    "accessoriesTitle": "AKSESORIS & PERAWATAN",
+    "aboutTitle": "TENTANG CLARISSA",
+    "paymentTitle": "ONLINE PAYMENT",
+    "copyright": "© {year} Clarissa. All rights reserved.",
+    "fashionLinks": {
+      "women": "Pakaian Wanita",
+      "men": "Pakaian Pria",
+      "muslim": "Muslim Wear",
+      "bags": "Tas",
+      "shoes": "Sepatu & Sandal"
+    },
+    "beautyLinks": {
+      "skincare": "Skincare",
+      "makeup": "Makeup",
+      "bodycare": "Body Care",
+      "haircare": "Hair Care"
+    },
+    "accessoriesLinks": {
+      "jewelry": "Perhiasan",
+      "watches": "Jam Tangan",
+      "glasses": "Kacamata",
+      "scarves": "Syal & Kerudung"
+    },
+    "aboutLinks": {
+      "story": "Cerita Kami",
+      "careers": "Karir",
+      "outlets": "Outlet",
+      "contact": "Hubungi Kami"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Tentang Clarissa — Cerita Kami",
+      "description": "Kenali lebih dekat Clarissa, perjalanan kami menjadi destinasi fashion terdepan di Indonesia."
+    },
+    "heroTitle": "Tentang Kami",
+    "heroSubtitle": "Perjalanan kami dalam menghadirkan pengalaman belanja terbaik di Indonesia",
+    "storyTitle": "Cerita Kami",
+    "storyContent": "Clarissa didirikan dengan visi menjadi one-stop shopping destination yang menghadirkan produk fashion, kecantikan, dan aksesoris berkualitas tinggi dengan harga terjangkau.",
+    "missionTitle": "Misi Kami",
+    "missionContent": "Menghadirkan pengalaman belanja yang menyenangkan dan memberikan produk terbaik untuk setiap pelanggan kami.",
+    "visionTitle": "Visi Kami",
+    "visionContent": "Menjadi jaringan ritel fashion terdepan dan terpercaya di Indonesia."
+  },
+  "contact": {
+    "meta": {
+      "title": "Hubungi Kami — Clarissa",
+      "description": "Hubungi tim Clarissa untuk pertanyaan, saran, atau kerjasama bisnis."
+    },
+    "heading": "Hubungi Kami",
+    "subtitle": "Kami senang mendengar dari Anda. Hubungi kami untuk pertanyaan atau saran.",
+    "form": {
+      "name": "Nama Lengkap",
+      "email": "Alamat Email",
+      "phone": "Nomor Telepon",
+      "subject": "Subjek",
+      "message": "Pesan",
+      "submit": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "success": "Pesan Anda telah terkirim! Kami akan segera menghubungi Anda.",
+      "error": "Terjadi kesalahan. Silakan coba lagi."
+    },
+    "info": {
+      "addressTitle": "Alamat",
+      "address": "Jakarta, Indonesia",
+      "phoneTitle": "Telepon",
+      "phone": "+62 812 3456 7890",
+      "emailTitle": "Email",
+      "email": "info@clarissa.id",
+      "hoursTitle": "Jam Operasional",
+      "hours": "Senin - Minggu: 10.00 - 22.00"
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog — Clarissa",
+      "description": "Tips fashion, trend terbaru, dan inspirasi gaya dari Clarissa."
+    },
+    "heading": "Blog Kami",
+    "subtitle": "Tips fashion, trend terbaru, dan inspirasi gaya",
+    "readMore": "Baca selengkapnya",
+    "comingSoon": "Segera hadir — artikel menarik seputar fashion dan gaya hidup."
+  },
+  "notFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "description": "Maaf, halaman yang Anda cari tidak tersedia.",
+    "backHome": "Kembali ke Beranda"
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba lagi",
+    "seeAll": "Lihat Semua",
+    "close": "Tutup",
+    "menu": "Menu",
+    "language": "Bahasa"
+  }
+}

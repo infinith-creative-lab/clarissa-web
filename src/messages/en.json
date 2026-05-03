@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "title": "Clarissa — No. 1 One Stop Shopping Experience",
+    "description": "Discover the best fashion, beauty, and accessories at Clarissa. Easy shopping, guaranteed quality.",
+    "keywords": "fashion, beauty, accessories, online shopping, clarissa, indonesia fashion store"
+  },
+  "nav": {
+    "home": "Home",
+    "allProducts": "All",
+    "fashion": "Fashion",
+    "beauty": "Beauty",
+    "accessories": "Accessories & Care",
+    "about": "About Clarissa",
+    "outlets": "Outlets",
+    "promo": "Promo",
+    "contact": "Contact Us",
+    "blog": "Blog",
+    "search": "Search products...",
+    "cart": "Cart",
+    "account": "Account",
+    "menu": "Menu"
+  },
+  "topBar": {
+    "phone": "+62 812 3456 7890",
+    "email": "info@clarissa.id",
+    "announcement1": "BEST COLLECTION",
+    "announcement2": "💖 GET 10% OFF & FREE GIFT ON YOUR FIRST PURCHASE. USE: 'CLARISSAID' AT CHECKOUT.",
+    "faq": "FAQ"
+  },
+  "header": {
+    "login": "LOGIN",
+    "storeLocation": "STORE LOCATION",
+    "subtitle": "NO.1 FASHION STORE"
+  },
+  "hero": {
+    "subtitle": "The New Essentials",
+    "title": "NEW BAG SERIES",
+    "badge": "NEW!",
+    "cta": "Shop Now"
+  },
+  "categories": {
+    "heading": "CHOOSE YOUR STYLE",
+    "womens": "Women's Fashion",
+    "mens": "Men & Women's Life",
+    "accessories": "Accessories",
+    "kids": "Kids & Maternity",
+    "description": "Explore your choices and define your own style",
+    "cta": "Browse Catalog!"
+  },
+  "looks": {
+    "heading": "STEAL HER LOOKS",
+    "viewAll": "View All"
+  },
+  "events": {
+    "heading": "OUR EVENTS",
+    "viewAll": "See All Events in Various Cities!",
+    "readMore": "Read more"
+  },
+  "outlets": {
+    "heading": "Our Outlets",
+    "outletCount": "Outlets",
+    "cityCount": "Cities",
+    "provinceCount": "Provinces",
+    "description": "Clarissa is present in various cities to serve your fashion needs.",
+    "openHours": "Open every day from 10:00 AM - 10:00 PM.",
+    "visitUs": "Visit Our Outlets"
+  },
+  "footer": {
+    "tagline": "No. 1 One Stop Shopping Experience in Indonesian",
+    "fashionTitle": "FASHION",
+    "beautyTitle": "BEAUTY",
+    "accessoriesTitle": "ACCESSORIES & CARE",
+    "aboutTitle": "ABOUT CLARISSA",
+    "paymentTitle": "ONLINE PAYMENT",
+    "copyright": "© {year} Clarissa. All rights reserved.",
+    "fashionLinks": {
+      "women": "Women's Clothing",
+      "men": "Men's Clothing",
+      "muslim": "Muslim Wear",
+      "bags": "Bags",
+      "shoes": "Shoes & Sandals"
+    },
+    "beautyLinks": {
+      "skincare": "Skincare",
+      "makeup": "Makeup",
+      "bodycare": "Body Care",
+      "haircare": "Hair Care"
+    },
+    "accessoriesLinks": {
+      "jewelry": "Jewelry",
+      "watches": "Watches",
+      "glasses": "Glasses",
+      "scarves": "Scarves & Hijab"
+    },
+    "aboutLinks": {
+      "story": "Our Story",
+      "careers": "Careers",
+      "outlets": "Outlets",
+      "contact": "Contact Us"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About Clarissa — Our Story",
+      "description": "Get to know Clarissa, our journey to becoming Indonesia's leading fashion destination."
+    },
+    "heroTitle": "About Us",
+    "heroSubtitle": "Our journey in delivering the best shopping experience in Indonesia",
+    "storyTitle": "Our Story",
+    "storyContent": "Clarissa was founded with a vision to become a one-stop shopping destination offering high-quality fashion, beauty, and accessories at affordable prices.",
+    "missionTitle": "Our Mission",
+    "missionContent": "To deliver an enjoyable shopping experience and provide the best products for every customer.",
+    "visionTitle": "Our Vision",
+    "visionContent": "To become the leading and most trusted fashion retail network in Indonesia."
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us — Clarissa",
+      "description": "Contact the Clarissa team for questions, suggestions, or business inquiries."
+    },
+    "heading": "Contact Us",
+    "subtitle": "We'd love to hear from you. Reach out for any questions or suggestions.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent! We will get back to you shortly.",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "addressTitle": "Address",
+      "address": "Jakarta, Indonesia",
+      "phoneTitle": "Phone",
+      "phone": "+62 812 3456 7890",
+      "emailTitle": "Email",
+      "email": "info@clarissa.id",
+      "hoursTitle": "Business Hours",
+      "hours": "Monday - Sunday: 10:00 AM - 10:00 PM"
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog — Clarissa",
+      "description": "Fashion tips, latest trends, and style inspiration from Clarissa."
+    },
+    "heading": "Our Blog",
+    "subtitle": "Fashion tips, latest trends, and style inspiration",
+    "readMore": "Read more",
+    "comingSoon": "Coming soon — exciting articles about fashion and lifestyle."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for is not available.",
+    "backHome": "Back to Home"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "seeAll": "See All",
+    "close": "Close",
+    "menu": "Menu",
+    "language": "Language"
+  }
+}
