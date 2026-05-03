@@ -1,11 +1,11 @@
 import createMiddleware from 'next-intl/middleware';
-import { routing } from '@/lib/i18n/routing';
+import { routing } from './lib/i18n/routing';
 
 /**
- * Next.js 16 Proxy — replaces middleware.ts
+ * Next.js Middleware
  * Handles locale detection, routing, and redirects at the edge.
  */
-export const proxy = createMiddleware(routing);
+export default createMiddleware(routing);
 
 export const config = {
   matcher: [
