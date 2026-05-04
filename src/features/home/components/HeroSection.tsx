@@ -26,7 +26,7 @@ export function HeroSection() {
   }, [slides.length]);
 
   return (
-    <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] bg-[#EAE8E3] overflow-hidden group">
+    <section className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden group" style={{ backgroundColor: '#EAE8E3' }}>
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -48,23 +48,23 @@ export function HeroSection() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            border: '1.5px solid rgba(255, 255, 255, 0.6)',
-            backgroundColor: 'rgba(255, 255, 255, 0.12)',
-            color: 'rgba(255, 255, 255, 0.85)',
+            border: '1.5px solid rgba(255, 255, 255, 0.8)',
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            color: 'rgba(255, 255, 255, 1)',
             cursor: 'pointer',
             transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-            backdropFilter: 'blur(2px)',
+            backdropFilter: 'blur(4px)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.9)';
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.95)';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 1)';
+            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 1)';
             e.currentTarget.style.transform = 'translateX(-2px)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.12)';
-            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.85)';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 1)';
             e.currentTarget.style.transform = 'translateX(0)';
           }}
           aria-label="Previous slide"
@@ -82,23 +82,23 @@ export function HeroSection() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            border: '1.5px solid rgba(255, 255, 255, 0.6)',
-            backgroundColor: 'rgba(255, 255, 255, 0.12)',
-            color: 'rgba(255, 255, 255, 0.85)',
+            border: '1.5px solid rgba(255, 255, 255, 0.8)',
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            color: 'rgba(255, 255, 255, 1)',
             cursor: 'pointer',
             transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-            backdropFilter: 'blur(2px)',
+            backdropFilter: 'blur(4px)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.9)';
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.95)';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 1)';
+            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 1)';
             e.currentTarget.style.transform = 'translateX(2px)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.12)';
-            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.85)';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+            e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 1)';
             e.currentTarget.style.transform = 'translateX(0)';
           }}
           aria-label="Next slide"

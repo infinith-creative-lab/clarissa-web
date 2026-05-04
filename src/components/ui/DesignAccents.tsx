@@ -29,14 +29,14 @@ export function DesignAccents({
           </div>
           
           {/* Subtle Silk-like Gradient */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,238,238,0.3)_0%,transparent_70%)]" />
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 70% 30%, rgba(255,238,238,0.3) 0%, transparent 70%)' }} />
           
           {/* Minimalist Vertical Line */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-neutral-300 to-transparent opacity-40" />
           
           {/* Gold Hairline Accents */}
-          <div className="absolute top-1/4 -right-10 w-64 h-px bg-gradient-to-l from-[#C5A059]/40 to-transparent rotate-[15deg]" />
-          <div className="absolute bottom-1/4 -left-10 w-64 h-px bg-gradient-to-r from-[#C5A059]/40 to-transparent -rotate-[15deg]" />
+          <div className="absolute top-1/4 -right-10 w-64 h-px" style={{ background: 'linear-gradient(to left, rgba(197,160,89,0.4), transparent)', transform: 'rotate(15deg)' }} />
+          <div className="absolute bottom-1/4 -left-10 w-64 h-px" style={{ background: 'linear-gradient(to right, rgba(197,160,89,0.4), transparent)', transform: 'rotate(-15deg)' }} />
         </>
       )}
 

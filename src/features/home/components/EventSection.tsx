@@ -29,7 +29,7 @@ export function EventSection() {
           {latestEvents.map((event) => (
             <div key={event.id} className="group cursor-pointer flex flex-col h-full">
               {/* Image Container */}
-              <div className="relative aspect-[4/5] overflow-hidden mb-6 bg-neutral-100 shrink-0">
+              <div className="relative overflow-hidden mb-6 bg-neutral-100 shrink-0" style={{ aspectRatio: '4/5' }}>
                 <img 
                   src={event.image} 
                   alt={event.title} 

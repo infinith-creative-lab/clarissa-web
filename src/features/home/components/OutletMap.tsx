@@ -151,8 +151,9 @@ export function OutletMap() {
             return hoveredStore === store.id && (
               <div
                 key={`tooltip-${store.id}`}
-                className="absolute p-6 bg-white/95 backdrop-blur-md shadow-[0_30px_60px_rgba(0,0,0,0.08)] z-50 pointer-events-none rounded-2xl w-64 border border-white animate-in fade-in zoom-in slide-in-from-bottom-4 duration-300"
+                className="absolute p-6 bg-white/95 backdrop-blur-md z-50 pointer-events-none rounded-2xl w-64 border border-white animate-in fade-in zoom-in slide-in-from-bottom-4 duration-300"
                 style={{
+                  boxShadow: '0 30px 60px rgba(0,0,0,0.08)',
                   left: `${(x / mapConfig.width) * 100}%`,
                   top: `${(y / mapConfig.height) * 100}%`,
                   transform: 'translate(-50%, -140%)'
@@ -165,7 +166,7 @@ export function OutletMap() {
                 <div className="text-[11px] text-neutral-500 leading-relaxed font-medium pt-1">
                   {store.address}
                 </div>
-                <div className="absolute top-[calc(100%-6px)] left-1/2 -translate-x-1/2 w-3 h-3 bg-white/95 backdrop-blur-md rotate-45 border-r border-b border-white" />
+                <div className="absolute left-1/2 w-3 h-3 bg-white/95 backdrop-blur-md rotate-45 border-r border-b border-white" style={{ top: 'calc(100% - 6px)', transform: 'translateX(-50%) rotate(45deg)' }} />
               </div>
             )
           })}
@@ -173,7 +174,7 @@ export function OutletMap() {
 
         {/* Refined Stats Row - Senuansa dengan Category/Event Cards */}
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 bg-white/60 backdrop-blur-sm p-2 rounded-[3rem] border border-white/80 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.03)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 bg-white/60 backdrop-blur-sm p-2 border border-neutral-200" style={{ boxShadow: '0 40px 80px -20px rgba(0,0,0,0.03)' }}>
             <div className="text-center py-12 px-8 border-neutral-100 md:border-r">
               <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-2 tracking-tighter">
                 <Counter end={outletStats.outletCount} />

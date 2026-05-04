@@ -34,14 +34,20 @@ export function StealHerLooks() {
           <div className="flex gap-4">
             <button 
               onClick={() => scroll('left')}
-              className="w-12 h-12 flex items-center justify-center border border-neutral-200 hover:border-neutral-900 transition-colors"
+              className="w-12 h-12 flex items-center justify-center border border-neutral-200 hover:border-neutral-900 cursor-pointer"
+              style={{ transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(-2px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; }}
               aria-label="Previous look"
             >
               <ChevronLeftIcon className="w-6 h-6 stroke-[1px]" />
             </button>
             <button 
               onClick={() => scroll('right')}
-              className="w-12 h-12 flex items-center justify-center border border-neutral-200 hover:border-neutral-900 transition-colors"
+              className="w-12 h-12 flex items-center justify-center border border-neutral-200 hover:border-neutral-900 cursor-pointer"
+              style={{ transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)' }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateX(2px)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateX(0)'; }}
               aria-label="Next look"
             >
               <ChevronRightIcon className="w-6 h-6 stroke-[1px]" />
@@ -59,7 +65,7 @@ export function StealHerLooks() {
               key={look.id} 
               className="min-w-[85%] md:min-w-[450px] snap-center group"
             >
-              <div className="relative aspect-[3/4] overflow-hidden mb-8 shadow-sm">
+              <div className="relative overflow-hidden mb-8 shadow-sm" style={{ aspectRatio: '3/4' }}>
                 <img 
                   src={look.mainImage} 
                   alt={look.title}
