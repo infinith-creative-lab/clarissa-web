@@ -4,10 +4,23 @@ import { Container } from '@/components/layout/Container';
 import { Link } from '@/lib/i18n/navigation';
 import { ArrowRightIcon } from '@/components/ui/Icon';
 import { DesignAccents } from '@/components/ui/DesignAccents';
+import { EventItem } from '@/lib/content/types';
 
-export function EventSection() {
+interface EventSectionProps {
+  events?: EventItem[];
+  title?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+export function EventSection({ 
+  events: customEvents,
+  title,
+  ctaText,
+  ctaLink
+}: EventSectionProps = {}) {
   const t = useTranslations('events');
-  const { events } = getHomeContent();
+  const events = customEvents || getHomeContent().events;
 
   // Limit to 4 items as requested
   const latestEvents = events.slice(0, 4);
@@ -20,7 +33,7 @@ export function EventSection() {
       <Container>
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-[0.3em] uppercase text-neutral-900 mb-6">
-            {t('heading')}
+            {title || t('heading')}
           </h2>
           <div className="w-32 h-1 bg-brand-200 mx-auto" />
         </div>
@@ -69,9 +82,9 @@ export function EventSection() {
         </div>
 
         <div className="text-center">
-          <Link href="/blog">
+          <Link href={ctaLink || "/blog"}>
             <button className="group relative inline-flex items-center gap-4 px-12 py-5 bg-neutral-900 text-white font-heading text-lg tracking-widest uppercase transition-all duration-500 hover:bg-brand-900 hover:pl-14 hover:pr-10">
-              <span className="relative z-10">{t('viewAll')}</span>
+              <span className="relative z-10">{ctaText || t('viewAll')}</span>
               <ArrowRightIcon className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-2" />
               
               {/* Button Decorative Underline */}

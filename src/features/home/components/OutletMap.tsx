@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { getHomeContent } from '@/lib/content/provider';
+import { OutletStats } from '@/lib/content/types';
 import { Container } from '@/components/layout/Container';
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { DesignAccents } from '@/components/ui/DesignAccents';
@@ -43,9 +44,17 @@ function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
   return <span ref={elementRef}>{count}</span>;
 }
 
-export function OutletMap() {
+export function OutletMap({ 
+  stats,
+  ctaText,
+  ctaLink
+}: { 
+  stats?: OutletStats;
+  ctaText?: string;
+  ctaLink?: string;
+} = {}) {
   const t = useTranslations('outlets');
-  const { outletStats } = getHomeContent();
+  const outletStats = stats || getHomeContent().outletStats;
   const [hoveredStore, setHoveredStore] = useState<string | null>(null);
 
   // Map Projection Config - Optimized Scale
@@ -199,6 +208,13 @@ export function OutletMap() {
             <p className="text-[11px] tracking-[0.4em] font-bold text-neutral-400 uppercase leading-relaxed max-w-xl mx-auto">
               {t('openHours')}
             </p>
+            {ctaText && ctaLink && (
+              <div className="pt-8">
+                <a href={ctaLink} className="inline-block px-10 py-4 bg-[#D4A0A0] hover:bg-[#C48B7C] text-white font-heading font-medium tracking-widest text-sm uppercase transition-all duration-500 rounded-full shadow-lg hover:shadow-xl">
+                  {ctaText}
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </Container>

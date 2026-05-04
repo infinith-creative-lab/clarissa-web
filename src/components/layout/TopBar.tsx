@@ -1,12 +1,18 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Container } from './Container';
-import { Link } from '@/lib/i18n/navigation';
+import { Link, usePathname } from '@/lib/i18n/navigation';
 import { MailIcon, PhoneIcon, HelpCircleIcon } from '@/components/ui/Icon';
 import { LanguageSwitcher } from '../i18n/LanguageSwitcher';
 
 export function TopBar() {
   const t = useTranslations('topBar');
   const tNav = useTranslations('nav');
+  const pathname = usePathname();
+
+  const isBeautyActive = pathname.includes('/beauty');
+  const isFashionActive = !isBeautyActive; // Default to fashion if not beauty
 
   return (
     <div className="w-full flex flex-col">
@@ -16,14 +22,22 @@ export function TopBar() {
           {/* Tabs */}
           <div className="flex items-end gap-2 px-2">
             <Link 
-              href="/fashion" 
-              className="bg-neutral-900 text-brand-100 px-6 py-2.5 rounded-t-lg font-medium text-xs tracking-wider uppercase"
+              href="/" 
+              className={`${
+                isFashionActive 
+                  ? "bg-neutral-900 text-brand-100" 
+                  : "bg-white text-neutral-600 border border-neutral-300 border-b-0 hover:bg-neutral-50"
+              } px-6 py-2.5 rounded-t-lg font-medium text-xs tracking-wider transition-all uppercase`}
             >
               {tNav('fashion')}
             </Link>
             <Link 
               href="/beauty" 
-              className="bg-white text-neutral-600 border border-neutral-300 border-b-0 px-6 py-2.5 rounded-t-lg font-medium text-xs tracking-wider hover:bg-neutral-50 transition-colors uppercase"
+              className={`${
+                isBeautyActive 
+                  ? "bg-neutral-900 text-brand-100" 
+                  : "bg-white text-neutral-600 border border-neutral-300 border-b-0 hover:bg-neutral-50"
+              } px-6 py-2.5 rounded-t-lg font-medium text-xs tracking-wider transition-all uppercase`}
             >
               {tNav('beauty')}
             </Link>

@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import { getHomeContent } from '@/lib/content/provider';
 import { ChevronLeftIcon, ChevronRightIcon } from '@/components/ui/Icon';
 
-export function HeroSection() {
-  const slides = getHomeContent().hero;
+export function HeroSection({ slides: customSlides }: { slides?: string[] }) {
+  const slides = customSlides || getHomeContent().hero;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

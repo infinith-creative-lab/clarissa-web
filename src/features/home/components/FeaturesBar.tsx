@@ -3,10 +3,11 @@
 import { useTranslations } from 'next-intl';
 import { getHomeContent } from '@/lib/content/provider';
 import { Container } from '@/components/layout/Container';
+import { FeatureItem } from '@/lib/content/types';
 
-export function FeaturesBar() {
+export function FeaturesBar({ features: customFeatures }: { features?: FeatureItem[] } = {}) {
   const t = useTranslations();
-  const { features } = getHomeContent();
+  const features = customFeatures || getHomeContent().features;
 
   return (
     <section className="bg-neutral-900 py-3 border-y border-neutral-800 relative overflow-hidden">
