@@ -96,9 +96,9 @@ export function OutletMap() {
   }, []);
 
   return (
-    <section className="relative py-24 md:py-48 bg-brand-50 overflow-hidden">
+    <section className="relative py-12 md:py-16 bg-brand-50 overflow-hidden">
       <Container className="relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-28">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <div className="inline-block text-[10px] font-bold text-brand-600 tracking-[0.4em] uppercase mb-4 animate-in fade-in slide-in-from-bottom-2 duration-700">
             {t('heading_sub') || 'Find Our Store'}
           </div>
@@ -174,27 +174,27 @@ export function OutletMap() {
 
         {/* Refined Stats Row - Senuansa dengan Category/Event Cards */}
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 bg-white/60 backdrop-blur-sm p-2 border border-neutral-200" style={{ boxShadow: '0 40px 80px -20px rgba(0,0,0,0.03)' }}>
-            <div className="text-center py-12 px-8 border-neutral-100 md:border-r">
-              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-2 tracking-tighter">
+          <div className="flex flex-col md:flex-row justify-between items-center border-y border-neutral-200 py-12 md:py-16">
+            <div className="flex-1 w-full text-center border-b border-neutral-200 md:border-b-0 md:border-r py-8 md:py-0">
+              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-4 tracking-tighter">
                 <Counter end={outletStats.outletCount} />
               </div>
-              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-400 uppercase">{t('outletCount')}</div>
+              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-500 uppercase">{t('outletCount')}</div>
             </div>
-            <div className="text-center py-12 px-8 border-neutral-100 md:border-r">
-              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-2 tracking-tighter">
+            <div className="flex-1 w-full text-center border-b border-neutral-200 md:border-b-0 md:border-r py-8 md:py-0">
+              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-4 tracking-tighter">
                 <Counter end={outletStats.cityCount} />
               </div>
-              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-400 uppercase">{t('cityCount')}</div>
+              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-500 uppercase">{t('cityCount')}</div>
             </div>
-            <div className="text-center py-12 px-8">
-              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-2 tracking-tighter">
+            <div className="flex-1 w-full text-center py-8 md:py-0">
+              <div className="text-6xl md:text-7xl font-heading font-bold text-neutral-900 mb-4 tracking-tighter">
                 <Counter end={outletStats.provinceCount} />
               </div>
-              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-400 uppercase">{t('provinceCount')}</div>
+              <div className="text-[10px] tracking-[0.5em] font-bold text-neutral-500 uppercase">{t('provinceCount')}</div>
             </div>
           </div>
-          <div className="mt-24 text-center space-y-6">
+          <div className="mt-10 md:mt-12 text-center space-y-6">
             <div className="w-16 h-px bg-brand-200 mx-auto" />
             <p className="text-[11px] tracking-[0.4em] font-bold text-neutral-400 uppercase leading-relaxed max-w-xl mx-auto">
               {t('openHours')}

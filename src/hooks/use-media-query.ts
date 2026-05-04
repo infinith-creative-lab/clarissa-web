@@ -10,9 +10,11 @@ export function useMediaQuery(query: string): boolean {
     return false;
   };
 
-  const [matches, setMatches] = useState<boolean>(getMatches(query));
+  const [matches, setMatches] = useState<boolean>(false);
 
   useEffect(() => {
+    // Jalankan segera setelah komponen di-mount di klien (browser)
+    setMatches(window.matchMedia(query).matches);
     const matchMedia = window.matchMedia(query);
     const handleChange = () => setMatches(getMatches(query));
 
