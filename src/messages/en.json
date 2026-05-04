@@ -1,4 +1,33 @@
 {
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to continue your exclusive shopping experience.",
+      "email": "Email Address",
+      "password": "Password",
+      "forgotPassword": "Forgot Password?",
+      "submit": "Sign In to Account",
+      "noAccount": "Don't have an account?",
+      "register": "Register Now",
+      "error": "Invalid email or password.",
+      "loading": "Verifying..."
+    },
+    "register": {
+      "title": "Join Clarissa",
+      "description": "Be part of our exclusive fashion community.",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "mismatch": "Mismatch",
+      "submit": "Register Now",
+      "hasAccount": "Already have an account?",
+      "login": "Sign In As Member",
+      "exclusive": "Exclusive Access",
+      "heroTitle": "Join The\nElite",
+      "heroDesc": "Unlock the full Clarissa experience"
+    }
+  },
   "meta": {
     "title": "Clarissa — No. 1 One Stop Shopping Experience",
     "description": "Discover the best fashion, beauty, and accessories at Clarissa. Easy shopping, guaranteed quality.",
@@ -18,7 +47,9 @@
     "search": "Search products...",
     "cart": "Cart",
     "account": "Account",
-    "menu": "Menu"
+    "menu": "Menu",
+    "login": "Login",
+    "register": "Register"
   },
   "topBar": {
     "phone": "+62 812 3456 7890",

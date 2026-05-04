@@ -96,8 +96,9 @@ export function StealHerLooks() {
                     </div>
                   ))}
                   <div className="flex items-center ml-2">
-                    <button className="text-[10px] tracking-widest font-bold uppercase border-b border-neutral-900 pb-1 hover:text-brand-600 hover:border-brand-600 transition-all duration-300">
+                    <button className="flex items-center gap-1.5 text-[10px] tracking-widest font-bold uppercase border-b border-neutral-900 pb-1 hover:text-brand-600 hover:border-brand-600 transition-all duration-300 group/btn cursor-pointer">
                       EXPLORE
+                      <ArrowRightIcon className="w-3 h-3 transition-transform duration-300 group-hover/btn:translate-x-1" />
                     </button>
                   </div>
                 </div>

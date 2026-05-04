@@ -11,8 +11,8 @@ export function TopBar() {
   const tNav = useTranslations('nav');
   const pathname = usePathname();
 
-  const isBeautyActive = pathname.includes('/beauty');
-  const isFashionActive = !isBeautyActive; // Default to fashion if not beauty
+  const isBeautyActive = pathname.endsWith('/beauty');
+  const isFashionActive = pathname === '/' || pathname === '/en' || pathname === '/id';
 
   return (
     <div className="w-full flex flex-col">

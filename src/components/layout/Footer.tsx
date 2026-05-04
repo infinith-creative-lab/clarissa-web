@@ -8,7 +8,8 @@ import {
   FacebookIcon, 
   TwitterIcon, 
   PhoneIcon, 
-  MailIcon 
+  MailIcon,
+  ArrowRightIcon
 } from '@/components/ui/Icon';
 
 export function Footer() {
@@ -249,18 +250,14 @@ export function Footer() {
               </p>
               <Link 
                 href="/member" 
-                style={{ 
-                  fontSize: '1rem', 
-                  fontWeight: 700, 
-                  color: '#262626', 
-                  textTransform: 'uppercase', 
-                  borderBottom: '2px solid #262626', 
-                  paddingBottom: '0.25rem', 
-                  display: 'inline-block',
-                  transition: 'all 150ms'
-                }}
+                className="group inline-flex items-center gap-3 text-[13px] font-bold text-neutral-900 uppercase tracking-[0.2em] transition-all duration-500 relative"
               >
-                {t('member.button')}
+                <span className="relative z-10">{t('member.button')}</span>
+                <ArrowRightIcon className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-2" />
+                
+                {/* Elegant Underline Decor */}
+                <div className="absolute -bottom-1 left-0 w-full h-px bg-neutral-300" />
+                <div className="absolute -bottom-1 left-0 w-0 h-px bg-neutral-900 transition-all duration-700 group-hover:w-full" />
               </Link>
             </div>
           </div>

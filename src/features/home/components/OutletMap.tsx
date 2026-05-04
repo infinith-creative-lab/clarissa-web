@@ -13,7 +13,7 @@ import javaHighRes from '@/lib/map/java-highres.json';
 /**
  * Enterprise-Grade Counter Component
  */
-function Counter({ end, duration = 2000 }: { end: number; duration?: number }) {
+function Counter({ end, duration = 1000 }: { end: number; duration?: number }) {
   const [count, setCount] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);

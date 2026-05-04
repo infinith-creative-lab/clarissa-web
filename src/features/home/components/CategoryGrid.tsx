@@ -75,7 +75,7 @@ export function CategoryGrid({
             </p>
           )}
           <Link href={ctaLink || "/fashion"}>
-            <button className="group relative inline-flex items-center gap-4 px-12 py-5 bg-neutral-900 text-white font-heading text-lg tracking-widest uppercase transition-all duration-500 hover:bg-brand-900 hover:pl-14 hover:pr-10">
+            <button className="group relative inline-flex items-center gap-4 px-12 py-5 bg-neutral-900 text-white font-heading text-lg tracking-widest uppercase transition-all duration-500 hover:bg-brand-900 hover:pl-14 hover:pr-10 cursor-pointer">
               <span className="relative z-10">{ctaText || t('categories.cta')}</span>
               <ArrowRightIcon className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-2" />
               

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/lib/i18n/navigation';
 import { Container } from './Container';
-import { SearchIcon, UserIcon, StoreIcon, ChevronDownIcon, MenuIcon } from '@/components/ui/Icon';
+import { SearchIcon, UserIcon, MapPinIcon, MenuIcon } from '@/components/ui/Icon';
 
 export function Header() {
   const t = useTranslations('nav');
@@ -13,15 +13,18 @@ export function Header() {
 
         {/* Left: Search Bar */}
         <div className="hidden md:flex flex-1 items-center">
-          <div className="relative w-72">
+          <div className="relative w-72 group">
             <input
               type="text"
               placeholder={t('search')}
-              className="w-full pl-4 pr-10 py-2.5 bg-white border border-brand-200 rounded text-sm focus:outline-none focus:ring-1 focus:ring-brand-300 shadow-sm"
+              className="w-full bg-transparent border-b border-neutral-300 py-2 text-sm text-neutral-800 placeholder:text-neutral-400 placeholder:uppercase placeholder:tracking-[0.2em] focus:outline-none transition-all duration-500"
             />
-            <button className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-brand-900">
-              <SearchIcon className="w-4 h-4" />
-            </button>
+            {/* Elegant Focus Line Decor */}
+            <div className="absolute bottom-0 left-0 w-0 h-px bg-neutral-900 transition-all duration-700 group-focus-within:w-full" />
+            
+            <div className="absolute right-0 top-1/2 -translate-y-1/2">
+              <SearchIcon className="w-4 h-4 text-neutral-400 group-focus-within:text-neutral-900 transition-colors duration-500" />
+            </div>
           </div>
         </div>
 
@@ -38,13 +41,16 @@ export function Header() {
         </div>
 
         {/* Right: Actions */}
-        <div className="flex-1 flex items-center justify-end gap-6 text-sm font-semibold text-neutral-700">
-          <Link href="/login" className="hidden md:flex items-center gap-2 hover:text-brand-900 transition-colors">
-            <UserIcon className="w-4 h-4" /> {tHeader('login')}
+        <div className="flex-1 flex items-center justify-end gap-8 text-sm font-semibold text-neutral-700">
+          <Link href="/about" className="group hidden md:flex items-center gap-2.5 hover:text-brand-900 transition-colors uppercase tracking-[0.18em] text-[13px] font-bold">
+            <MapPinIcon className="w-4 h-4 text-neutral-500 group-hover:text-brand-900 transition-colors" /> {tHeader('storeLocation')}
           </Link>
-          <div className="hidden md:flex items-center gap-2 cursor-pointer hover:text-brand-900 transition-colors uppercase">
-            <StoreIcon className="w-4 h-4" /> {tHeader('storeLocation')} <ChevronDownIcon className="w-4 h-4" />
-          </div>
+          
+          <div className="hidden md:block w-px h-4 bg-neutral-300" aria-hidden="true" />
+
+          <Link href="/login" className="group hidden md:flex items-center gap-2.5 hover:text-brand-900 transition-colors uppercase tracking-[0.18em] text-[13px] font-bold">
+            <UserIcon className="w-4 h-4 text-neutral-500 group-hover:text-brand-900 transition-colors" /> {tHeader('login')}
+          </Link>
 
           {/* Mobile Actions */}
           <button className="p-2 hover:bg-brand-100 rounded-full md:hidden text-neutral-600" aria-label={t('search')}>

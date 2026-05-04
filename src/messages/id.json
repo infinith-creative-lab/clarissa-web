@@ -1,4 +1,33 @@
 {
+  "auth": {
+    "login": {
+      "title": "Selamat Datang Kembali",
+      "subtitle": "Masuk untuk melanjutkan pengalaman belanja eksklusif Anda.",
+      "email": "Email",
+      "password": "Kata Sandi",
+      "forgotPassword": "Lupa Kata Sandi?",
+      "submit": "Masuk ke Akun",
+      "noAccount": "Belum memiliki akun?",
+      "register": "Daftar Sekarang",
+      "error": "Email atau kata sandi tidak valid.",
+      "loading": "Memverifikasi..."
+    },
+    "register": {
+      "title": "Bergabung dengan Clarissa",
+      "description": "Menjadi bagian dari komunitas fashion eksklusif kami.",
+      "name": "Nama Lengkap",
+      "email": "Email",
+      "password": "Kata Sandi",
+      "confirmPassword": "Konfirmasi Kata Sandi",
+      "mismatch": "Tidak Cocok",
+      "submit": "Daftar Sekarang",
+      "hasAccount": "Sudah memiliki akun?",
+      "login": "Masuk Sebagai Member",
+      "exclusive": "Akses Eksklusif",
+      "heroTitle": "Gabung Ke\nElite",
+      "heroDesc": "Buka pengalaman penuh Clarissa"
+    }
+  },
   "meta": {
     "title": "Clarissa — No. 1 One Stop Shopping Experience",
     "description": "Temukan koleksi fashion, kecantikan, dan aksesoris terbaik di Clarissa. Belanja mudah, kualitas terjamin.",
@@ -18,7 +47,9 @@
     "search": "Cari produk...",
     "cart": "Keranjang",
     "account": "Akun",
-    "menu": "Menu"
+    "menu": "Menu",
+    "login": "Masuk",
+    "register": "Daftar"
   },
   "topBar": {
     "phone": "+62 812 3456 7890",
