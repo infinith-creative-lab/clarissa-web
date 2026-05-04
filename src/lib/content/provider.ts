@@ -81,28 +81,28 @@ export function getBeautyCategories(): Category[] {
       id: 'skincare',
       slug: 'skincare',
       nameKey: 'categories.skincare',
-      image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop',
+      image: '/images/categories/beauty/Skincare.webp',
       link: '/beauty/skincare',
     },
     {
       id: 'cosmetics',
       slug: 'cosmetics',
       nameKey: 'categories.cosmetics',
-      image: 'https://images.unsplash.com/photo-1596462502278-27bf85033e5a?q=80&w=800&auto=format&fit=crop',
+      image: '/images/categories/beauty/Cosmetics.webp',
       link: '/beauty/cosmetics',
     },
     {
       id: 'haircare',
       slug: 'haircare',
       nameKey: 'categories.haircare',
-      image: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800&auto=format&fit=crop',
+      image: '/images/categories/beauty/Haircare.webp',
       link: '/beauty/haircare',
     },
     {
       id: 'bodycare',
       slug: 'bodycare',
       nameKey: 'categories.bodycare',
-      image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop',
+      image: '/images/categories/beauty/Bodycare.webp',
       link: '/beauty/bodycare',
     },
   ];
@@ -230,9 +230,9 @@ export function getHomeContent(): HomePageContent {
 export function getBeautyContent(): HomePageContent {
   return {
     hero: [
-      'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571781926291-c477eb69248f?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1600&auto=format&fit=crop',
+      '/images/hero/beauty/hero-1.webp',
+      '/images/hero/beauty/hero-2.webp',
+      '/images/hero/beauty/hero-3.webp',
     ],
     categories: getBeautyCategories(),
     looks: [],
