@@ -38,24 +38,72 @@ export function HeroSection() {
         />
       ))}
 
-      {/* Navigation Arrows - Minimalist Naked Style */}
-      <div className="absolute inset-y-0 left-8 md:left-12 flex items-center z-20">
+      {/* Navigation Arrows - Transparent Bordered Square */}
+      <div style={{ position: 'absolute', top: 0, bottom: 0, left: '2rem', display: 'flex', alignItems: 'center', zIndex: 20 }}>
         <button 
           onClick={prevSlide}
-          className="text-white/40 hover:text-white transition-all duration-500 hover:-translate-x-1"
+          style={{
+            width: '56px',
+            height: '56px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1.5px solid rgba(255, 255, 255, 0.6)',
+            backgroundColor: 'rgba(255, 255, 255, 0.12)',
+            color: 'rgba(255, 255, 255, 0.85)',
+            cursor: 'pointer',
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+            backdropFilter: 'blur(2px)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.9)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.95)';
+            e.currentTarget.style.transform = 'translateX(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.12)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.85)';
+            e.currentTarget.style.transform = 'translateX(0)';
+          }}
           aria-label="Previous slide"
         >
-          <ChevronLeftIcon className="w-10 h-10 md:w-12 md:h-12 stroke-[1px]" />
+          <ChevronLeftIcon style={{ width: '24px', height: '24px', strokeWidth: '1.5px' }} />
         </button>
       </div>
       
-      <div className="absolute inset-y-0 right-8 md:right-12 flex items-center z-20">
+      <div style={{ position: 'absolute', top: 0, bottom: 0, right: '2rem', display: 'flex', alignItems: 'center', zIndex: 20 }}>
         <button 
           onClick={nextSlide}
-          className="text-white/40 hover:text-white transition-all duration-500 hover:translate-x-1"
+          style={{
+            width: '56px',
+            height: '56px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1.5px solid rgba(255, 255, 255, 0.6)',
+            backgroundColor: 'rgba(255, 255, 255, 0.12)',
+            color: 'rgba(255, 255, 255, 0.85)',
+            cursor: 'pointer',
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+            backdropFilter: 'blur(2px)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.9)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.95)';
+            e.currentTarget.style.transform = 'translateX(2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.12)';
+            e.currentTarget.style.color = 'rgba(255, 255, 255, 0.85)';
+            e.currentTarget.style.transform = 'translateX(0)';
+          }}
           aria-label="Next slide"
         >
-          <ChevronRightIcon className="w-10 h-10 md:w-12 md:h-12 stroke-[1px]" />
+          <ChevronRightIcon style={{ width: '24px', height: '24px', strokeWidth: '1.5px' }} />
         </button>
       </div>
 
