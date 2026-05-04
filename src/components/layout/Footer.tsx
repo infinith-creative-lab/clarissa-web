@@ -84,20 +84,12 @@ export function Footer() {
         <Container>
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(5, 1fr)', 
+            gridTemplateColumns: 'repeat(4, 1fr)', 
             gap: '3rem 2rem' 
           }}>
-            {/* FASHION */}
+            {/* 1. FASHION */}
             <div>
-              <h4 style={{ 
-                fontSize: '1rem', 
-                fontWeight: 700, 
-                color: '#262626', 
-                textTransform: 'uppercase', 
-                marginBottom: '1.5rem', 
-                letterSpacing: '0.05em',
-                fontFamily: 'var(--font-body)'
-              }}>
+              <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#262626', textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
                 {t('fashion.title')}
               </h4>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0, margin: 0 }}>
@@ -111,17 +103,9 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* BEAUTY */}
+            {/* 2. BEAUTY */}
             <div>
-              <h4 style={{ 
-                fontSize: '1rem', 
-                fontWeight: 700, 
-                color: '#262626', 
-                textTransform: 'uppercase', 
-                marginBottom: '1.5rem', 
-                letterSpacing: '0.05em',
-                fontFamily: 'var(--font-body)'
-              }}>
+              <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#262626', textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
                 {t('beauty.title')}
               </h4>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0, margin: 0 }}>
@@ -135,130 +119,95 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* INFORMASI PELANGGAN & TOKO ONLINE */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-              <div>
-                <h4 style={{ 
-                  fontSize: '1rem', 
-                  fontWeight: 700, 
-                  color: '#262626', 
-                  textTransform: 'uppercase', 
-                  marginBottom: '1.5rem', 
-                  letterSpacing: '0.05em',
-                  fontFamily: 'var(--font-body)'
-                }}>
-                  {t('customer.title')}
-                </h4>
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0, margin: 0 }}>
-                  {Object.entries(t.raw('customer.items')).map(([key, label]: [string, any]) => (
-                    <li key={key}>
-                      <Link href={`/${key}`} style={{ fontSize: '0.875rem', color: '#525252', transition: 'color 150ms' }}>
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 style={{ 
-                  fontSize: '1rem', 
-                  fontWeight: 700, 
-                  color: '#262626', 
-                  textTransform: 'uppercase', 
-                  marginBottom: '1.5rem', 
-                  letterSpacing: '0.05em',
-                  fontFamily: 'var(--font-body)'
-                }}>
-                  {t('online.title')}
-                </h4>
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0, margin: 0 }}>
-                  {Object.entries(t.raw('online.items')).map(([key, label]: [string, any]) => (
-                    <li key={key}>
-                      <Link href={`/shop/${key}`} style={{ fontSize: '0.875rem', color: '#525252', transition: 'color 150ms' }}>
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* 3. INFORMASI PELANGGAN */}
+            <div>
+              <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#262626', textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '0.05em' }}>
+                {t('customer.title')}
+              </h4>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0, margin: 0 }}>
+                {Object.entries(t.raw('customer.items')).map(([key, label]: [string, any]) => (
+                  <li key={key}>
+                    <Link href={`/${key}`} style={{ fontSize: '0.875rem', color: '#525252', transition: 'color 150ms' }}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+                {/* Append Online Items to this column to match the 4-column layout in screenshot */}
+                {Object.entries(t.raw('online.items')).map(([key, label]: [string, any]) => (
+                  <li key={key}>
+                    <Link href={`/shop/${key}`} style={{ fontSize: '0.875rem', color: '#525252', transition: 'color 150ms' }}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* TENTANG CLARISSA & KONTAK */}
+            {/* 4. NEWSLETTER & KONTAK */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
               <div>
-                <h4 style={{ 
-                  fontSize: '1rem', 
-                  fontWeight: 700, 
-                  color: '#262626', 
-                  textTransform: 'uppercase', 
-                  marginBottom: '1.5rem', 
-                  letterSpacing: '0.05em',
-                  fontFamily: 'var(--font-body)'
-                }}>
-                  {t('about.title')}
+                <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#262626', textTransform: 'uppercase', marginBottom: '1rem', letterSpacing: '0.05em' }}>
+                  {t('newsletter.title')}
                 </h4>
-                <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', listStyle: 'none', padding: 0, margin: 0 }}>
-                  {Object.entries(t.raw('about.items')).map(([key, label]: [string, any]) => (
-                    <li key={key}>
-                      <Link href={`/about/${key}`} style={{ fontSize: '0.875rem', color: '#525252', transition: 'color 150ms' }}>
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 style={{ 
-                  fontSize: '1rem', 
-                  fontWeight: 700, 
-                  color: '#262626', 
-                  textTransform: 'uppercase', 
-                  marginBottom: '1.5rem', 
-                  letterSpacing: '0.05em',
-                  fontFamily: 'var(--font-body)'
+                <p style={{ fontSize: '0.75rem', color: '#525252', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+                  {t('newsletter.description')}
+                </p>
+                
+                {/* Newsletter Form */}
+                <div style={{ 
+                  display: 'flex', 
+                  alignItems: 'stretch', 
+                  border: '1px solid #d4d4d4', 
+                  borderRadius: '6px',
+                  overflow: 'hidden',
+                  backgroundColor: '#ffffff'
                 }}>
+                  <input 
+                    type="email" 
+                    placeholder={t('newsletter.placeholder')} 
+                    style={{ 
+                      flex: 1, 
+                      padding: '12px 16px', 
+                      fontSize: '0.875rem', 
+                      border: 'none', 
+                      outline: 'none',
+                      backgroundColor: 'transparent',
+                      color: '#262626'
+                    }} 
+                  />
+                  <button style={{ 
+                    backgroundColor: '#262626', 
+                    color: '#ffffff', 
+                    padding: '0 20px', 
+                    fontSize: '0.75rem', 
+                    fontWeight: 700, 
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    border: 'none',
+                    cursor: 'pointer',
+                    transition: 'background-color 150ms'
+                  }}>
+                    {t('newsletter.button')}
+                  </button>
+                </div>
+              </div>
+
+              {/* Contact Info (In the same column as Newsletter) */}
+              <div>
+                <h4 style={{ fontSize: '0.875rem', fontWeight: 700, color: '#262626', textTransform: 'uppercase', marginBottom: '1.25rem', letterSpacing: '0.1em' }}>
                   {t('contact.title')}
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <PhoneIcon style={{ width: '20px', height: '20px', color: '#262626', flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.875rem', fontWeight: 500, color: '#262626' }}>08778016399</span>
+                    <PhoneIcon style={{ width: '18px', height: '18px', color: '#525252', flexShrink: 0 }} />
+                    <span style={{ fontSize: '0.875rem', fontWeight: 500, color: '#525252' }}>08778016399</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <MailIcon style={{ width: '20px', height: '20px', color: '#262626', flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.875rem', fontWeight: 500, color: '#262626', wordBreak: 'break-all' }}>clarissastoremarketing@gmail.com</span>
+                    <MailIcon style={{ width: '18px', height: '18px', color: '#525252', flexShrink: 0 }} />
+                    <span style={{ fontSize: '0.875rem', fontWeight: 500, color: '#525252', wordBreak: 'break-all' }}>clarissastoremarketing@gmail.com</span>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* JADILAH MEMBER */}
-            <div>
-              <h4 style={{ 
-                fontSize: '1rem', 
-                fontWeight: 700, 
-                color: '#262626', 
-                textTransform: 'uppercase', 
-                marginBottom: '1rem', 
-                letterSpacing: '0.05em',
-                fontFamily: 'var(--font-body)'
-              }}>
-                {t('member.title')}
-              </h4>
-              <p style={{ fontSize: '0.75rem', color: '#525252', marginBottom: '1.5rem', lineHeight: 1.6 }}>
-                {t('member.description')}
-              </p>
-              <Link 
-                href="/member" 
-                className="group inline-flex items-center gap-3 text-[13px] font-bold text-neutral-900 uppercase tracking-[0.2em] transition-all duration-500 relative"
-              >
-                <span className="relative z-10">{t('member.button')}</span>
-                <ArrowRightIcon className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-2" />
-                
-                {/* Elegant Underline Decor */}
-                <div className="absolute -bottom-1 left-0 w-full h-px bg-neutral-300" />
-                <div className="absolute -bottom-1 left-0 w-0 h-px bg-neutral-900 transition-all duration-700 group-hover:w-full" />
-              </Link>
             </div>
           </div>
         </Container>

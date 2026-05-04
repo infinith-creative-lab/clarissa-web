@@ -162,10 +162,11 @@
     "contact": {
       "title": "CONTACT"
     },
-    "member": {
-      "title": "BECOME A MEMBER",
-      "description": "Join now and get 50k discount!",
-      "button": "JOIN MEMBER"
+    "newsletter": {
+      "title": "NEWSLETTER",
+      "description": "Get the latest updates on collections and exciting promos from Clarissa.",
+      "placeholder": "Your Email",
+      "button": "SUBSCRIBE"
     },
     "bottom": {
       "terms": "Site Policy",

@@ -160,10 +160,11 @@
     "contact": {
       "title": "KONTAK"
     },
-    "member": {
-      "title": "JADILAH MEMBER",
-      "description": "Bergabunglah sekarang dan dapatkan potongan 50rb!",
-      "button": "GABUNG MEMBER"
+    "newsletter": {
+      "title": "NEWSLETTER",
+      "description": "Dapatkan info terbaru mengenai koleksi dan promo menarik dari Clarissa.",
+      "placeholder": "Emailmu",
+      "button": "LANGGANAN"
     },
     "bottom": {
       "terms": "Kebijakan Situs",
