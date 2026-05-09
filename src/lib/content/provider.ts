@@ -1,11 +1,14 @@
 import type {
   HomePageContent,
+  AboutPageContent,
   Category,
   LookItem,
   EventItem,
   OutletStats,
   NavLink,
   FeatureItem,
+  FAQPageContent,
+  ContactPageContent,
 } from './types';
 
 /**
@@ -239,5 +242,118 @@ export function getBeautyContent(): HomePageContent {
     events: getEvents(),
     outletStats: getOutletStats(),
     features: getFeatures(),
+  };
+}
+
+export function getAboutContent(): AboutPageContent {
+  return {
+    heroImage: '/images/about/hero.webp',
+    storyImage: '/images/stores/kediri.webp',
+    visionImage: '/images/about/vision.webp',
+    stats: [
+      { id: 'stat-1', value: 12, suffix: '+', labelKey: 'about.stats.outlets' },
+      { id: 'stat-2', value: 8, suffix: '+', labelKey: 'about.stats.cities' },
+      { id: 'stat-3', value: 10, suffix: '+', labelKey: 'about.stats.years' },
+      { id: 'stat-4', value: 50, suffix: 'K+', labelKey: 'about.stats.customers' },
+    ],
+    values: [
+      { id: 'val-1', icon: 'sparkle', titleKey: 'about.values.uptodate.title', descriptionKey: 'about.values.uptodate.description' },
+      { id: 'val-2', icon: 'star', titleKey: 'about.values.allinone.title', descriptionKey: 'about.values.allinone.description' },
+      { id: 'val-3', icon: 'heart', titleKey: 'about.values.affordable.title', descriptionKey: 'about.values.affordable.description' },
+      { id: 'val-4', icon: 'shield', titleKey: 'about.values.premiumquality.title', descriptionKey: 'about.values.premiumquality.description' },
+    ],
+    storeShowcases: [
+      { id: 'store-1', name: 'Clarissa Gresik', city: 'Gresik', image: '/images/stores/gresik.webp', address: 'Jl. Tj. Hulu II No.58, Ponganganrejo, Yosowilangun, Kec Manyar, Kab Gresik, Jawa Timur.', mapLink: 'https://share.google/NE6u3pgrJYIXQtSJC' },
+      { id: 'store-2', name: 'Clarissa Lamongan', city: 'Lamongan', image: '/images/stores/lamongan.webp', address: 'Jl. Lamongrejo No.65, Krajan, Jetis, Kabupaten Lamongan, Jawa Timur', mapLink: 'https://share.google/AI6I875LNNOfIUvGl' },
+      { id: 'store-3', name: 'Clarissa Mojokerto', city: 'Mojokerto', image: '/images/stores/mojokerto.webp', address: 'Jl. Empunala No.151, Mergelo, Balongsari, Kec. Magersari, Kota Mojokerto, Jawa Timur', mapLink: 'https://share.google/EsEBIXrpVfq540MQB' },
+      { id: 'store-4', name: 'Clarissa Jombang', city: 'Jombang', image: '/images/stores/jombang.webp', address: 'Jl. KH. Hasyim Asy\'ari No.56, Jombatan, Kec. Jombang, Kabupaten Jombang, Jawa Timur', mapLink: 'https://share.google/GvN18cMBQj0g78Vi7' },
+      { id: 'store-5', name: 'Clarissa Tuban', city: 'Tuban', image: '/images/stores/tuban.webp', address: 'Jl. Sunan Kalijogo No.54, Latsari, Kabupaten Tuban, Jawa Timur', mapLink: 'https://share.google/IOhiZcVgfT9Wfq46F' },
+      { id: 'store-6', name: 'Clarissa Kediri', city: 'Kediri', image: '/images/stores/kediri.webp', address: 'Jl. HOS. Cokroaminoto No.171, Banjaran,Kabupaten Kediri, Jawa Timur', mapLink: 'https://share.google/eaMfFf6pICQneYedT' },
+      { id: 'store-7', name: 'Clarissa Tuluangagung', city: 'Tulungagung', image: '/images/stores/tulungagung.webp', address: 'Jl. KHR Abdul Fattah No.37, Botoran, Kec. Tulungagung, Kabupaten Tulungagung, Jawa Timur', mapLink: 'https://share.google/nBNqwM8XmyYPIFSuM' },
+      { id: 'store-8', name: 'Clarissa Malang', city: 'Malang', image: '/images/stores/malang.webp', address: 'Jl. Simpang Ijen No.5, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur', mapLink: 'https://share.google/JjzH5WS4jRJntbDGw' },
+      { id: 'store-9', name: 'Clarissa Probolinggo', city: 'Probolinggo', image: '/images/stores/probolinggo.webp', address: 'Jl. Dr.Sutomo No.153, Mangunharjo, Kec. Mayangan, Kota Probolinggo, Jawa Timur', mapLink: 'https://share.google/9u40dve8PFbIG7LtN' },
+      { id: 'store-10', name: 'Clarissa Madiun', city: 'Madiun', image: '/images/stores/madiun.webp', address: 'Jl. Cokroaminoto No.88, Kejuron, Kec. Taman, Kota Madiun, Jawa Timur', mapLink: 'https://share.google/O1PaxAP7fPAJXAqNx' },
+      { id: 'store-11', name: 'Clarissa Pasuruan', city: 'Pasuruan', image: '/images/stores/pasuruan.webp', address: 'Jl. Dokter Wahidin Sudiro Husodo No.176,RT.1/RW.4, Purutrejo, Kec. Purworejo, Kota Pasuruan, Jawa Timur' },
+    ],
+  };
+}
+
+/**
+ * Returns content for the FAQ page.
+ * Dashboard-ready: Swappable with a fetch() call to a CMS.
+ */
+export function getFAQContent(): FAQPageContent {
+  return {
+    heroTitleKey: 'faq.heroTitle',
+    heroSubtitleKey: 'faq.heroSubtitle',
+    categories: [
+      {
+        id: 'cat-orders',
+        titleKey: 'faq.categories.orders.title',
+        items: [
+          {
+            id: 'q-1-1',
+            questionKey: 'faq.categories.orders.q1.question',
+            answerKey: 'faq.categories.orders.q1.answer',
+          },
+          {
+            id: 'q-1-2',
+            questionKey: 'faq.categories.orders.q2.question',
+            answerKey: 'faq.categories.orders.q2.answer',
+          },
+        ],
+      },
+      {
+        id: 'cat-shipping',
+        titleKey: 'faq.categories.shipping.title',
+        items: [
+          {
+            id: 'q-2-1',
+            questionKey: 'faq.categories.shipping.q1.question',
+            answerKey: 'faq.categories.shipping.q1.answer',
+          },
+          {
+            id: 'q-2-2',
+            questionKey: 'faq.categories.shipping.q2.question',
+            answerKey: 'faq.categories.shipping.q2.answer',
+          },
+        ],
+      },
+      {
+        id: 'cat-returns',
+        titleKey: 'faq.categories.returns.title',
+        items: [
+          {
+            id: 'q-3-1',
+            questionKey: 'faq.categories.returns.q1.question',
+            answerKey: 'faq.categories.returns.q1.answer',
+          },
+        ],
+      },
+      {
+        id: 'cat-membership',
+        titleKey: 'faq.categories.membership.title',
+        items: [
+          {
+            id: 'q-4-1',
+            questionKey: 'faq.categories.membership.q1.question',
+            answerKey: 'faq.categories.membership.q1.answer',
+          },
+        ],
+      },
+    ],
+  };
+}
+/**
+ * Returns content for the Contact page.
+ * Dashboard-ready: Swappable with a fetch() call to a CMS.
+ */
+export function getContactContent(): ContactPageContent {
+  return {
+    heroTitleKey: 'contact.heading',
+    heroSubtitleKey: 'contact.subtitle',
+    email: 'info@clarissa.id',
+    phone: '+62 812 3456 7890',
+    hoursKey: 'contact.info.hours',
   };
 }

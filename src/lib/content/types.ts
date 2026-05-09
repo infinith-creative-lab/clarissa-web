@@ -100,3 +100,64 @@ export interface BlogPost {
   publishedAt: string;
   author: string;
 }
+
+/** About page — dashboard-editable fields */
+export interface AboutValue {
+  id: string;
+  icon: 'heart' | 'star' | 'shield' | 'sparkle';
+  titleKey: string;
+  descriptionKey: string;
+}
+
+export interface AboutStat {
+  id: string;
+  value: number;
+  suffix?: string;
+  labelKey: string;
+}
+
+export interface StoreShowcase {
+  id: string;
+  name: string;
+  city: string;
+  image: string;
+  address: string;
+  mapLink?: string;
+}
+
+export interface AboutPageContent {
+  heroImage: string;
+  storyImage: string;
+  visionImage: string;
+  stats: AboutStat[];
+  values: AboutValue[];
+  storeShowcases: StoreShowcase[];
+}
+
+/** FAQ page — dashboard-editable fields */
+export interface FAQItem {
+  id: string;
+  questionKey: string;
+  answerKey: string;
+}
+
+export interface FAQCategory {
+  id: string;
+  titleKey: string;
+  items: FAQItem[];
+}
+
+export interface FAQPageContent {
+  heroTitleKey: string;
+  heroSubtitleKey: string;
+  categories: FAQCategory[];
+}
+
+/** Contact page — dashboard-editable fields */
+export interface ContactPageContent {
+  heroTitleKey: string;
+  heroSubtitleKey: string;
+  email: string;
+  phone: string;
+  hoursKey: string;
+}

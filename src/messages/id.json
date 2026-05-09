@@ -179,14 +179,54 @@
       "title": "Tentang Clarissa — Cerita Kami",
       "description": "Kenali lebih dekat Clarissa, perjalanan kami menjadi destinasi fashion terdepan di Indonesia."
     },
-    "heroTitle": "Tentang Kami",
-    "heroSubtitle": "Perjalanan kami dalam menghadirkan pengalaman belanja terbaik di Indonesia",
+    "heroTitle": "Clarissa Fashion Store, No. 1 One Stop Shopping Experience in Indonesia",
+    "heroSubtitle": "Clarissa Fashion Store adalah perusahaan retail yang bergerak di bidang fashion, berfokus pada penjualan pakaian dan aksesori berkualitas tinggi untuk wanita. Berdiri dengan komitmen untuk menyediakan produk-produk fashion yang stylish, nyaman, dan sesuai dengan tren terkini, kami hadir untuk memenuhi kebutuhan gaya hidup modern dengan sentuhan keunikan dan kreativitas.",
+    "storyLabel": "Perjalanan Kami",
     "storyTitle": "Cerita Kami",
-    "storyContent": "Clarissa didirikan dengan visi menjadi one-stop shopping destination yang menghadirkan produk fashion, kecantikan, dan aksesoris berkualitas tinggi dengan harga terjangkau.",
-    "missionTitle": "Misi Kami",
-    "missionContent": "Menghadirkan pengalaman belanja yang menyenangkan dan memberikan produk terbaik untuk setiap pelanggan kami.",
-    "visionTitle": "Visi Kami",
-    "visionContent": "Menjadi jaringan ritel fashion terdepan dan terpercaya di Indonesia."
+    "storyParagraphs": [
+      "Clarissa Fashion Store lahir dari satu keyakinan sederhana, setiap perempuan berhak merasa percaya diri dengan caranya sendiri. Bukan sekadar mengikuti tren, tapi menemukan gaya yang benar-benar mencerminkan dirinya.",
+      "Berawal dari kecintaan pada fashion yang anggun, nyaman, dan relevan untuk berbagai momen, Clarissa tumbuh menjadi ruang bagi perempuan untuk menemukan pilihan terbaiknya. Dari daily wear yang effortless hingga koleksi spesial untuk hari raya dan acara istimewa, setiap koleksi dipilih dengan perhatian pada detail, kualitas bahan, dan motif yang selalu relevan.",
+      "Dan kami juga percaya bahwa tampil elegan tidak harus mahal. Karena itu, Clarissa berkomitmen untuk tetap mempertahankan harga yang ramah dan terjangkau, tanpa mengorbankan kualitas. Kami ingin setiap perempuan bisa merasakan indahnya berpakaian dengan baik, tanpa perlu merasa terbebani.",
+      "Clarissa hadir untuk menemani setiap fase, setiap pencapaian, setiap momen hangat bersama keluarga dan sahabat. Dengan pilihan yang terus diperbarui dan pelayanan yang ramah, kami ingin menjadi bagian dari cerita perempuan Indonesia yang aktif, modern, dan tetap memegang nilai elegan.",
+      "Bagi kami, fashion bukan hanya tentang apa yang dikenakan. Tapi tentang bagaimana perasaan saat memakainya."
+    ],
+    "missionTitle": "Misi",
+    "missionList": [
+      "Menyediakan koleksi fashion yang selalu mengikuti perkembangan trend untuk wanita",
+      "Menyajikan berbagai pilihan produk dengan harga yang terjangkau tanpa mengorbankan kualitas",
+      "Memastikan kepuasan pelanggan dengan pelayanan yang cepat, ramah, dan profesional",
+      "Meningkatkan kehadiran online melalui platform e-commerce dan media sosial untuk memudahkan akses belanja bagi pelanggan."
+    ],
+    "visionTitle": "Visi",
+    "visionContent": "Clarissa menjadi jaringan toko retail fashion terbesar dengan 100 cabang seluruh Indonesia, unggul dalam pelayanan, profesional dalam pengelolaan, dan memenuhi kebutuhan serta harapan konsumen",
+    "valuesLabel": "Yang Kami Yakini",
+    "valuesTitle": "Nilai Kami",
+    "values": {
+      "uptodate": {
+        "title": "Up to Date",
+        "description": "Selalu menghadirkan gaya terbaru agar penampilan Anda tidak pernah ketinggalan zaman."
+      },
+      "allinone": {
+        "title": "All in One",
+        "description": "Destinasi lengkap untuk memenuhi semua kebutuhan fashion Anda di satu tempat."
+      },
+      "affordable": {
+        "title": "Affordable",
+        "description": "Gaya elegan dan menawan yang dapat dinikmati dengan harga terjangkau."
+      },
+      "premiumquality": {
+        "title": "Premium Quality",
+        "description": "Menggunakan material pilihan berkualitas premium untuk kenyamanan dan keawetan maksimal."
+      }
+    },
+    "stats": {
+      "outlets": "Outlet",
+      "cities": "Kota",
+      "years": "Tahun",
+      "customers": "Pelanggan Senang"
+    },
+    "storesLabel": "Kunjungi Butik Kami",
+    "storesTitle": "Toko Kami"
   },
   "contact": {
     "meta": {
@@ -226,6 +266,54 @@
     "subtitle": "Tips fashion, trend terbaru, dan inspirasi gaya",
     "readMore": "Baca selengkapnya",
     "comingSoon": "Segera hadir — artikel menarik seputar fashion dan gaya hidup."
+  },
+  "faq": {
+    "heroTitle": "PERTANYAAN UMUM",
+    "heroSubtitle": "Cari jawaban untuk pertanyaan Anda seputar layanan Clarissa.",
+    "categories": {
+      "orders": {
+        "title": "BELANJA & PESANAN",
+        "q1": {
+          "question": "Bagaimana cara melacak pesanan saya?",
+          "answer": "Anda dapat melacak pesanan Anda melalui tautan yang kami kirimkan via email setelah pesanan dikirim, atau melalui dashboard akun Anda di bagian Riwayat Pesanan."
+        },
+        "q2": {
+          "question": "Dapatkah saya mengubah atau membatalkan pesanan?",
+          "answer": "Perubahan atau pembatalan hanya dapat dilakukan dalam waktu 1 jam setelah pesanan dibuat. Silakan hubungi Customer Service kami segera untuk bantuan."
+        }
+      },
+      "shipping": {
+        "title": "PENGIRIMAN & ESTIMASI",
+        "q1": {
+          "question": "Berapa lama waktu pengiriman pesanan?",
+          "answer": "Estimasi pengiriman untuk area Jawa adalah 2-4 hari kerja, dan luar Jawa adalah 3-7 hari kerja tergantung lokasi tujuan."
+        },
+        "q2": {
+          "question": "Berapa biaya pengiriman?",
+          "answer": "Biaya pengiriman dihitung secara otomatis berdasarkan berat paket dan lokasi pengiriman Anda saat proses Checkout."
+        }
+      },
+      "returns": {
+        "title": "PENGEMBALIAN & PENUKARAN",
+        "q1": {
+          "question": "Apakah saya bisa menukar barang yang sudah dibeli?",
+          "answer": "Ya, kami menerima penukaran barang dalam waktu maksimal 7 hari setelah diterima, selama kondisi barang masih baru, tag belum dilepas, dan menyertakan bukti pembelian."
+        }
+      },
+      "membership": {
+        "title": "KEANGGOTAAN MEMBER",
+        "q1": {
+          "question": "Apa keuntungan menjadi Member Clarissa?",
+          "answer": "Sebagai member, Anda akan mendapatkan poin setiap pembelanjaan, akses prioritas untuk koleksi baru, diskon khusus ulang tahun, dan undangan eksklusif ke event kami."
+        }
+      }
+    },
+    "cta": {
+      "badge": "HUBUNGI KAMI",
+      "title": "Butuh bantuan lebih lanjut atau saran personal?",
+      "description": "Tim bantuan kami siap memastikan pengalaman Clarissa Anda tetap luar biasa.",
+      "button": "Hubungi Bantuan"
+    }
   },
   "notFound": {
     "title": "Halaman Tidak Ditemukan",

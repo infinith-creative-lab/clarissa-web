@@ -181,14 +181,54 @@
       "title": "About Clarissa — Our Story",
       "description": "Get to know Clarissa, our journey to becoming Indonesia's leading fashion destination."
     },
-    "heroTitle": "About Us",
-    "heroSubtitle": "Our journey in delivering the best shopping experience in Indonesia",
+    "heroTitle": "Clarissa Fashion Store, No. 1 One Stop Shopping Experience in Indonesia",
+    "heroSubtitle": "Clarissa Fashion Store is a retail company in the fashion industry, focusing on selling high-quality clothing and accessories for women. Founded with a commitment to providing stylish, comfortable, and trendy fashion products, we are here to meet modern lifestyle needs with a touch of uniqueness and creativity.",
+    "storyLabel": "Our Journey",
     "storyTitle": "Our Story",
-    "storyContent": "Clarissa was founded with a vision to become a one-stop shopping destination offering high-quality fashion, beauty, and accessories at affordable prices.",
-    "missionTitle": "Our Mission",
-    "missionContent": "To deliver an enjoyable shopping experience and provide the best products for every customer.",
-    "visionTitle": "Our Vision",
-    "visionContent": "To become the leading and most trusted fashion retail network in Indonesia."
+    "storyParagraphs": [
+      "Clarissa Fashion Store was born from a simple belief: every woman deserves to feel confident in her own way. It's not just about following trends, but finding a style that truly reflects who she is.",
+      "Starting from a love for elegant, comfortable fashion relevant for various moments, Clarissa has grown into a space for women to find their best choices. From effortless daily wear to special collections for festive and special occasions, every piece is chosen with attention to detail, material quality, and always relevant motifs.",
+      "And we also believe that looking elegant doesn't have to be expensive. Because of that, Clarissa is committed to maintaining friendly and affordable prices, without compromising quality. We want every woman to experience the beauty of dressing well, without feeling burdened.",
+      "Clarissa is here to accompany every phase, every achievement, every warm moment with family and friends. With continuously updated choices and friendly service, we want to be part of the story of active, modern Indonesian women who hold onto elegant values.",
+      "For us, fashion isn't just about what is worn. It's about how you feel when wearing it."
+    ],
+    "missionTitle": "Mission",
+    "missionList": [
+      "Providing fashion collections that always follow the latest trends for women",
+      "Offering a wide selection of products at affordable prices without compromising quality",
+      "Ensuring customer satisfaction with fast, friendly, and professional service",
+      "Increasing online presence through e-commerce platforms and social media to facilitate shopping access for customers."
+    ],
+    "visionTitle": "Vision",
+    "visionContent": "Clarissa aims to become the largest fashion retail network with 100 branches across Indonesia, excelling in service, professional management, and meeting consumer needs and expectations.",
+    "valuesLabel": "What We Stand For",
+    "valuesTitle": "Our Values",
+    "values": {
+      "uptodate": {
+        "title": "Up to Date",
+        "description": "Always bringing the latest styles so your look is never out of date."
+      },
+      "allinone": {
+        "title": "All in One",
+        "description": "The complete destination to fulfill all your fashion needs in one place."
+      },
+      "affordable": {
+        "title": "Affordable",
+        "description": "Elegant and captivating styles that can be enjoyed at accessible prices."
+      },
+      "premiumquality": {
+        "title": "Premium Quality",
+        "description": "Using select premium quality materials for maximum comfort and durability."
+      }
+    },
+    "stats": {
+      "outlets": "Outlets",
+      "cities": "Cities",
+      "years": "Years",
+      "customers": "Happy Customers"
+    },
+    "storesLabel": "Visit Our Boutiques",
+    "storesTitle": "Our Stores"
   },
   "contact": {
     "meta": {
@@ -228,6 +268,54 @@
     "subtitle": "Fashion tips, latest trends, and style inspiration",
     "readMore": "Read more",
     "comingSoon": "Coming soon — exciting articles about fashion and lifestyle."
+  },
+  "faq": {
+    "heroTitle": "FREQUENTLY ASKED QUESTIONS",
+    "heroSubtitle": "Find answers to your questions about Clarissa's services.",
+    "categories": {
+      "orders": {
+        "title": "SHOPPING & ORDERS",
+        "q1": {
+          "question": "How can I track my order?",
+          "answer": "You can track your order through the link we send via email after the order is shipped, or through your account dashboard in the Order History section."
+        },
+        "q2": {
+          "question": "Can I change or cancel my order?",
+          "answer": "Changes or cancellations can only be made within 1 hour after the order is placed. Please contact our Customer Service immediately for assistance."
+        }
+      },
+      "shipping": {
+        "title": "SHIPPING & ESTIMATES",
+        "q1": {
+          "question": "How long does shipping take?",
+          "answer": "Estimated shipping for Java area is 2-4 business days, and outside Java is 3-7 business days depending on the destination."
+        },
+        "q2": {
+          "question": "How much is the shipping cost?",
+          "answer": "Shipping costs are automatically calculated based on the package weight and your delivery location during the Checkout process."
+        }
+      },
+      "returns": {
+        "title": "RETURNS & EXCHANGES",
+        "q1": {
+          "question": "Can I exchange items I've already bought?",
+          "answer": "Yes, we accept item exchanges within a maximum of 7 days after receipt, as long as the item is still in new condition, tags have not been removed, and you include proof of purchase."
+        }
+      },
+      "membership": {
+        "title": "MEMBERSHIP",
+        "q1": {
+          "question": "What are the benefits of becoming a Clarissa Member?",
+          "answer": "As a member, you will earn points for every purchase, priority access to new collections, special birthday discounts, and exclusive invitations to our events."
+        }
+      }
+    },
+    "cta": {
+      "badge": "GET IN TOUCH",
+      "title": "Need further assistance or personalized advice?",
+      "description": "Our dedicated support team is available to ensure your Clarissa experience is exceptional.",
+      "button": "Contact Support"
+    }
   },
   "notFound": {
     "title": "Page Not Found",
