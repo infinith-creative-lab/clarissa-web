@@ -7,11 +7,15 @@ import { Container } from '@/components/layout/Container';
 import { Divider } from '@/components/ui/Divider';
 import { StoreShowcase } from '@/lib/content/types';
 
-import { MapPinIcon } from '@/components/ui/Icon';
+import { MapPinIcon, WhatsAppIcon } from '@/components/ui/Icon';
 
 /* ── Store Card ── */
 
 function StoreCard({ store }: { store: StoreShowcase }) {
+  const whatsappUrl = store.whatsapp 
+    ? `https://wa.me/${store.whatsapp.replace(/\D/g, '')}` 
+    : null;
+
   return (
     <div className="group flex-shrink-0 w-[300px] md:w-[360px] select-none relative">
       {/* Image */}
@@ -37,7 +41,7 @@ function StoreCard({ store }: { store: StoreShowcase }) {
         <div className="absolute inset-3 border border-white/0 group-hover:border-white/30 transition-all duration-700 pointer-events-none" />
 
         {/* Center Button Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-30 pointer-events-none">
+        <div className="absolute inset-0 flex flex-col gap-3 items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-30 pointer-events-none">
           {store.mapLink && (
             <a
               href={store.mapLink}
@@ -52,10 +56,31 @@ function StoreCard({ store }: { store: StoreShowcase }) {
                   e.preventDefault();
                 }
               }}
-              className="pointer-events-auto inline-flex items-center gap-2 px-6 py-3 bg-white/95 backdrop-blur-sm text-neutral-900 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-brand-50 hover:text-brand-700 transition-all duration-300 transform scale-95 group-hover:scale-100 shadow-xl"
+              className="pointer-events-auto inline-flex items-center gap-2 px-6 py-3 bg-white/95 backdrop-blur-sm text-neutral-900 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-brand-50 hover:text-brand-700 transition-all duration-300 transform scale-95 group-hover:scale-100 shadow-xl w-48 justify-center"
             >
               <MapPinIcon className="w-3.5 h-3.5" />
               View on Map
+            </a>
+          )}
+
+          {whatsappUrl && (
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onDragStart={(e) => e.preventDefault()}
+              onPointerDown={(e) => e.stopPropagation()}
+              onPointerUp={(e) => e.stopPropagation()}
+              onClick={(e) => {
+                const track = e.currentTarget.closest('.touch-pan-y');
+                if (track && track.getAttribute('data-dragging') === 'true') {
+                  e.preventDefault();
+                }
+              }}
+              className="pointer-events-auto inline-flex items-center gap-2 px-6 py-3 bg-brand-600 text-white text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-brand-700 transition-all duration-300 transform scale-95 group-hover:scale-100 shadow-xl w-48 justify-center"
+            >
+              <WhatsAppIcon className="w-3.5 h-3.5" />
+              WhatsApp
             </a>
           )}
         </div>

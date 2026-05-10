@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from './Container';
 import { Link, usePathname } from '@/lib/i18n/navigation';
-import { MailIcon, PhoneIcon, HelpCircleIcon } from '@/components/ui/Icon';
+import { MailIcon, PhoneIcon, HelpCircleIcon, HeartIcon } from '@/components/ui/Icon';
 import { LanguageSwitcher } from '../i18n/LanguageSwitcher';
 
 export function TopBar() {
@@ -11,8 +11,8 @@ export function TopBar() {
   const tNav = useTranslations('nav');
   const pathname = usePathname();
 
-  const isBeautyActive = pathname.endsWith('/beauty');
-  const isFashionActive = pathname === '/' || pathname === '/en' || pathname === '/id';
+  const isBeautyActive = pathname === '/beauty' || pathname.startsWith('/beauty/');
+  const isFashionActive = pathname === '/' || pathname.startsWith('/fashion');
 
   return (
     <div className="w-full flex flex-col">
@@ -79,15 +79,15 @@ export function TopBar() {
               >
                 <span>{t('announcement1')}</span>
                 <span className="text-neutral-500">•</span>
-                <span>{t('announcement2')}</span>
+                <span className="flex items-center gap-2"><HeartIcon className="w-3.5 h-3.5 text-pink-500" fill="currentColor" /> {t('announcement2')}</span>
                 <span className="text-neutral-500">•</span>
                 <span>{t('announcement1')}</span>
                 <span className="text-neutral-500">•</span>
-                <span>{t('announcement2')}</span>
+                <span className="flex items-center gap-2"><HeartIcon className="w-3.5 h-3.5 text-pink-500" fill="currentColor" /> {t('announcement2')}</span>
                 <span className="text-neutral-500">•</span>
                 <span>{t('announcement1')}</span>
                 <span className="text-neutral-500">•</span>
-                <span>{t('announcement2')}</span>
+                <span className="flex items-center gap-2"><HeartIcon className="w-3.5 h-3.5 text-pink-500" fill="currentColor" /> {t('announcement2')}</span>
                 <span className="text-neutral-500">•</span>
               </div>
               <div 
@@ -97,15 +97,15 @@ export function TopBar() {
               >
                 <span>{t('announcement1')}</span>
                 <span className="text-neutral-500">•</span>
-                <span>{t('announcement2')}</span>
+                <span className="flex items-center gap-2"><HeartIcon className="w-3.5 h-3.5 text-pink-500" fill="currentColor" /> {t('announcement2')}</span>
                 <span className="text-neutral-500">•</span>
                 <span>{t('announcement1')}</span>
                 <span className="text-neutral-500">•</span>
-                <span>{t('announcement2')}</span>
+                <span className="flex items-center gap-2"><HeartIcon className="w-3.5 h-3.5 text-pink-500" fill="currentColor" /> {t('announcement2')}</span>
                 <span className="text-neutral-500">•</span>
                 <span>{t('announcement1')}</span>
                 <span className="text-neutral-500">•</span>
-                <span>{t('announcement2')}</span>
+                <span className="flex items-center gap-2"><HeartIcon className="w-3.5 h-3.5 text-pink-500" fill="currentColor" /> {t('announcement2')}</span>
                 <span className="text-neutral-500">•</span>
               </div>
             </div>

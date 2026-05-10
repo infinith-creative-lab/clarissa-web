@@ -36,7 +36,7 @@ export default async function BeautyPage({ params }: { params: Promise<{ locale:
         title="CHOOSE YOUR PRODUCT"
         description="Buat dirimu lebih menawan"
         ctaText="Cek Katalog Kami"
-        ctaLink="/beauty/catalog"
+        ctaLink="/beauty/products"
       />
       
       {/* Beauty page does not include StealHerLooks per mockup */}

@@ -2,6 +2,7 @@ import { ContactHero } from './ContactHero';
 import { ContactInfo } from './ContactInfo';
 import { StoreCarousel } from '@/features/about/components/StoreCarousel';
 import { DesignAccents } from '@/components/ui/DesignAccents';
+import { FeaturesBar } from '@/features/home/components/FeaturesBar';
 
 export function ContactContent() {
   return (
@@ -21,6 +22,8 @@ export function ContactContent() {
           <StoreCarousel />
         </div>
       </section>
+
+      <FeaturesBar />
     </div>
   );
 }

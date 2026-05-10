@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { DesignAccents } from '@/components/ui/DesignAccents';
+import { ArrowRightIcon } from '@/components/ui/Icon';
 
 /**
  * A separate, high-end contact section for the FAQ page.
@@ -35,10 +36,10 @@ export function FAQContact() {
         
         <a 
           href="/contact" 
-          className="group inline-flex items-center gap-6 text-[11px] font-bold tracking-[0.4em] uppercase text-neutral-900 hover:text-brand-600 transition-all duration-300"
+          className="group inline-flex items-center gap-4 text-[11px] font-bold tracking-[0.4em] uppercase text-neutral-900 hover:text-brand-600 transition-all duration-300"
         >
           <span>{t('faq.cta.button' as any)}</span>
-          <div className="w-16 h-px bg-neutral-900 group-hover:bg-brand-600 transition-all duration-300 transform origin-left group-hover:scale-x-110" />
+          <ArrowRightIcon className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
     </section>

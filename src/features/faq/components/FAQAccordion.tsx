@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getFAQContent } from '@/lib/content/provider';
 import { Container } from '@/components/layout/Container';
-import { ChevronDownIcon } from '@/components/ui/Icon';
+import { PlusIcon, MinusIcon } from '@/components/ui/Icon';
 import { FAQCategory, FAQItem } from '@/lib/content/types';
 
 interface FAQAccordionProps {
@@ -71,9 +71,17 @@ export function FAQAccordion({
                     </div>
                     
                     {/* Animated Plus/Minus Icon */}
-                    <div className="relative w-6 h-6 mt-2 flex-shrink-0">
-                      <div className="absolute top-1/2 left-0 w-full h-px bg-neutral-900 transition-transform duration-500" />
-                      <div className={`absolute top-0 left-1/2 w-px h-full bg-neutral-900 transition-transform duration-500 ${isOpen ? 'rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
+                    <div className="relative w-6 h-6 mt-2 flex-shrink-0 text-neutral-900">
+                      <PlusIcon 
+                        className={`absolute inset-0 w-6 h-6 transition-all duration-500 ${
+                          isOpen ? 'rotate-180 opacity-0 scale-50' : 'rotate-0 opacity-100 scale-100'
+                        }`} 
+                      />
+                      <MinusIcon 
+                        className={`absolute inset-0 w-6 h-6 transition-all duration-500 ${
+                          isOpen ? 'rotate-0 opacity-100 scale-100' : '-rotate-180 opacity-0 scale-50'
+                        }`} 
+                      />
                     </div>
                   </button>
 

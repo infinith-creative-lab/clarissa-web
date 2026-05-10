@@ -55,7 +55,7 @@
     "phone": "+62 812 3456 7890",
     "email": "info@clarissa.id",
     "announcement1": "KOLEKSI TERBAIK",
-    "announcement2": "💖 DAPATKAN DISKON 10% & HADIAH GRATIS UNTUK PEMBELIAN PERTAMA. GUNAKAN KODE: 'CLARISSAID' SAAT CHECKOUT.",
+    "announcement2": "DAPATKAN DISKON 10% & HADIAH GRATIS UNTUK PEMBELIAN PERTAMA. GUNAKAN KODE: 'CLARISSAID' SAAT CHECKOUT.",
     "faq": "FAQ"
   },
   "header": {
@@ -72,15 +72,15 @@
   "categories": {
     "heading": "CHOOSE YOUR STYLE",
     "modestWear": "MODEST WEAR",
-    "hijab": "HIJAB COLLECTION",
-    "underwear": "UNDERWEAR",
-    "bagsAccessories": "BAGS & ACCESSORIES",
-    "footwear": "FOOTWEAR",
-    "kidsLifestyle": "KIDS & LIFESTYLE",
-    "skincare": "SKINCARE",
-    "cosmetics": "COSMETICS",
-    "haircare": "HAIRCARE",
-    "bodycare": "BODYCARE",
+    "hijab": "KOLEKSI HIJAB",
+    "underwear": "PAKAIAN DALAM",
+    "bagsAccessories": "TAS & AKSESORI",
+    "footwear": "ALAS KAKI",
+    "kidsLifestyle": "ANAK & GAYA HIDUP",
+    "skincare": "PERAWATAN KULIT",
+    "cosmetics": "KOSMETIK",
+    "haircare": "PERAWATAN RAMBUT",
+    "bodycare": "PERAWATAN TUBUH",
     "description": "Jelajahi pilihanmu tentukan sendiri gayamu",
     "cta": "Cek Katalog Kami"
   },
@@ -328,5 +328,35 @@
     "close": "Tutup",
     "menu": "Menu",
     "language": "Bahasa"
+  },
+  "catalog": {
+    "sortBy": "Urutkan Berdasarkan",
+    "newest": "Terbaru",
+    "bestSeller": "Terlaris",
+    "priceHighLow": "Harga Tertinggi → Terendah",
+    "priceLowHigh": "Harga Terendah → Tertinggi",
+    "az": "A → Z",
+    "za": "Z → A",
+    "others": "LAINNYA",
+    "discount": "Diskon",
+    "size": "UKURAN",
+    "color": "WARNA",
+    "itemsFound": "{count} Produk Ditemukan"
+  },
+  "productTags": {
+    "new": "BARU",
+    "bestSeller": "TERLARIS",
+    "off": "{percent}% OFF"
+  },
+  "productCategories": {
+    "modest": "MODEST WEAR",
+    "hijab": "HIJAB COLLECTION",
+    "bags": "BAGS & ACCESSORIES",
+    "underwear": "UNDERWEAR",
+    "footwear": "FOOTWEAR",
+    "kids": "KIDS & LIFESTYLE",
+    "skincare": "SKINCARE",
+    "cosmetics": "COSMETICS",
+    "haircare": "HAIRCARE"
   }
 }

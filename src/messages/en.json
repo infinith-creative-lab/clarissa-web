@@ -55,7 +55,7 @@
     "phone": "+62 812 3456 7890",
     "email": "info@clarissa.id",
     "announcement1": "BEST COLLECTION",
-    "announcement2": "💖 GET 10% OFF & FREE GIFT ON YOUR FIRST PURCHASE. USE: 'CLARISSAID' AT CHECKOUT.",
+    "announcement2": "GET 10% OFF & FREE GIFT ON YOUR FIRST PURCHASE. USE: 'CLARISSAID' AT CHECKOUT.",
     "faq": "FAQ"
   },
   "header": {
@@ -330,5 +330,35 @@
     "close": "Close",
     "menu": "Menu",
     "language": "Language"
+  },
+  "catalog": {
+    "sortBy": "Sort By",
+    "newest": "Newest",
+    "bestSeller": "Best Seller",
+    "priceHighLow": "Price High → Low",
+    "priceLowHigh": "Price Low → High",
+    "az": "A → Z",
+    "za": "Z → A",
+    "others": "OTHERS",
+    "discount": "Discount",
+    "size": "SIZE",
+    "color": "COLOR",
+    "itemsFound": "{count} Items Found"
+  },
+  "productTags": {
+    "new": "NEW",
+    "bestSeller": "BEST SELLER",
+    "off": "{percent}% OFF"
+  },
+  "productCategories": {
+    "modest": "MODEST WEAR",
+    "hijab": "HIJAB COLLECTION",
+    "bags": "BAGS & ACCESSORIES",
+    "underwear": "UNDERWEAR",
+    "footwear": "FOOTWEAR",
+    "kids": "KIDS & LIFESTYLE",
+    "skincare": "SKINCARE",
+    "cosmetics": "COSMETICS",
+    "haircare": "HAIRCARE"
   }
 }

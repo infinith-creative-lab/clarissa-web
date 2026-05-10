@@ -18,7 +18,8 @@ export interface HeroBanner {
 export interface Category {
   id: string;
   slug: string;
-  nameKey: string;
+  nameKey?: string; // For static i18n
+  name?: string | { en: string; id: string }; // For dynamic CMS content
   image: string;
   link: string;
 }
@@ -50,8 +51,8 @@ export interface StoreLocation {
   name: string;
   address: string;
   city: string;
-  x: number; // Percentage from left (0-100)
-  y: number; // Percentage from top (0-100)
+  x?: number; // Percentage from left (0-100)
+  y?: number; // Percentage from top (0-100)
   lat?: number;
   lng?: number;
 }
@@ -123,6 +124,7 @@ export interface StoreShowcase {
   image: string;
   address: string;
   mapLink?: string;
+  whatsapp?: string;
 }
 
 export interface AboutPageContent {
