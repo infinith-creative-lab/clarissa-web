@@ -44,6 +44,13 @@ export interface EventItem {
   ctaText: string;
   ctaLink: string;
   date?: string;
+  category?: 'exhibition' | 'opening' | 'collection' | 'editorial';
+  featured?: boolean;
+}
+
+/** Events page — dashboard-editable fields */
+export interface EventPageContent {
+  events: EventItem[];
 }
 
 export interface StoreLocation {
@@ -90,16 +97,6 @@ export interface FooterColumn {
     labelKey: string;
     href: string;
   }>;
-}
-
-export interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  coverImage: string;
-  publishedAt: string;
-  author: string;
 }
 
 /** About page — dashboard-editable fields */

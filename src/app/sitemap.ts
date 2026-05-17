@@ -10,7 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/beauty',
     '/accessories',
     '/outlets',
-    '/promo'
+    '/promo',
+    '/events',
+    '/faq'
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];

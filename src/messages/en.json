@@ -43,7 +43,6 @@
     "outlets": "Outlets",
     "promo": "Promo",
     "contact": "Contact Us",
-    "blog": "Blog",
     "search": "Search products...",
     "cart": "Cart",
     "account": "Account",
@@ -259,16 +258,6 @@
       "hours": "Monday - Sunday: 10:00 AM - 10:00 PM"
     }
   },
-  "blog": {
-    "meta": {
-      "title": "Blog — Clarissa",
-      "description": "Fashion tips, latest trends, and style inspiration from Clarissa."
-    },
-    "heading": "Our Blog",
-    "subtitle": "Fashion tips, latest trends, and style inspiration",
-    "readMore": "Read more",
-    "comingSoon": "Coming soon — exciting articles about fashion and lifestyle."
-  },
   "faq": {
     "heroTitle": "FREQUENTLY ASKED QUESTIONS",
     "heroSubtitle": "Find answers to your questions about Clarissa's services.",
@@ -360,5 +349,32 @@
     "skincare": "SKINCARE",
     "cosmetics": "COSMETICS",
     "haircare": "HAIRCARE"
+  },
+  "eventsPage": {
+    "meta": {
+      "title": "Events & Happenings — Clarissa",
+      "description": "Discover the latest events, exhibitions, store openings, and exclusive collections from Clarissa across Indonesia."
+    },
+    "gridTitle": "FIND OUT EVENTS IN YOUR CITY",
+    "gridSubtitle": "Browse our complete collection of events and happenings",
+    "categories": {
+      "all": "All",
+      "exhibition": "Exhibition",
+      "opening": "Store Opening",
+      "collection": "Collection",
+      "editorial": "Editorial"
+    },
+    "date": "Date",
+    "location": "Location",
+    "readMore": "Read More",
+    "noEvents": "No events found in this category.",
+    "cta": {
+      "badge": "COLLABORATE WITH US",
+      "title": "Want to Collaborate with Clarissa?",
+      "description": "As a fast fashion retail brand, Clarissa actively supports various events and strategic collaborations. Send us your best proposal through the form below, and our team will get back to you soon.",
+      "email": "info@clarissa.id",
+      "phone": "+62 812 3456 7890",
+      "button": "Contact Us"
+    }
   }
 }

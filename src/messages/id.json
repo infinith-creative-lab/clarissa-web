@@ -43,7 +43,6 @@
     "outlets": "Outlet",
     "promo": "Promo",
     "contact": "Hubungi Kami",
-    "blog": "Blog",
     "search": "Cari produk...",
     "cart": "Keranjang",
     "account": "Akun",
@@ -257,16 +256,6 @@
       "hours": "Senin - Minggu: 10.00 - 22.00"
     }
   },
-  "blog": {
-    "meta": {
-      "title": "Blog — Clarissa",
-      "description": "Tips fashion, trend terbaru, dan inspirasi gaya dari Clarissa."
-    },
-    "heading": "Blog Kami",
-    "subtitle": "Tips fashion, trend terbaru, dan inspirasi gaya",
-    "readMore": "Baca selengkapnya",
-    "comingSoon": "Segera hadir — artikel menarik seputar fashion dan gaya hidup."
-  },
   "faq": {
     "heroTitle": "PERTANYAAN UMUM",
     "heroSubtitle": "Cari jawaban untuk pertanyaan Anda seputar layanan Clarissa.",
@@ -358,5 +347,32 @@
     "skincare": "SKINCARE",
     "cosmetics": "COSMETICS",
     "haircare": "HAIRCARE"
+  },
+  "eventsPage": {
+    "meta": {
+      "title": "Acara & Kegiatan — Clarissa",
+      "description": "Temukan acara terbaru, pameran, pembukaan toko, dan koleksi eksklusif dari Clarissa di seluruh Indonesia."
+    },
+    "gridTitle": "CARI TAHU EVENT YANG ADA DI KOTAMU",
+    "gridSubtitle": "Telusuri koleksi lengkap acara dan kegiatan kami",
+    "categories": {
+      "all": "Semua",
+      "exhibition": "Pameran",
+      "opening": "Pembukaan Toko",
+      "collection": "Koleksi",
+      "editorial": "Editorial"
+    },
+    "date": "Tanggal",
+    "location": "Lokasi",
+    "readMore": "Baca Selengkapnya",
+    "noEvents": "Tidak ada acara dalam kategori ini.",
+    "cta": {
+      "badge": "KOLABORASI BERSAMA KAMI",
+      "title": "Mau Kolaborasi Bareng Clarissa?",
+      "description": "Sebagai fast fashion retail brand, Clarissa aktif mendukung berbagai event dan kolaborasi strategis. Kirimkan proposal terbaikmu melalui form di bawah ini, dan tim Clarissa akan segera menghubungimu.",
+      "email": "info@clarissa.id",
+      "phone": "+62 812 3456 7890",
+      "button": "Hubungi Kami"
+    }
   }
 }

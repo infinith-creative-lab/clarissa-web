@@ -33,6 +33,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <HreflangLinks />
+        <link rel="alternate" type="application/rss+xml" href="/feed/events.xml" title="Clarissa Events Feed" />
       </head>
       <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>

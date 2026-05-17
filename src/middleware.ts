@@ -16,6 +16,6 @@ export const config = {
      * - /images, /icons, /fonts (static assets)
      * - favicon.ico, robots.txt, sitemap.xml, manifest.json
      */
-    '/((?!api|_next|images|icons|fonts|favicon\\.ico|robots\\.txt|sitemap\\.xml|manifest\\.json).*)',
+    '/((?!api|_next|assets|images|icons|fonts|favicon\\.ico|robots\\.txt|sitemap\\.xml|manifest\\.json|manifest\\.webmanifest|feed/events\\.xml).*)',
   ],
 };

@@ -27,7 +27,7 @@ const heightStyles = {
 
 /**
  * Full-width editorial hero banner component.
- * Reusable for About, Blog, Contact, and any future pages.
+ * Reusable for About, Events, Contact, and any future pages.
  *
  * Dashboard-ready: pass `title`, `subtitle`, and `backgroundImage` from CMS content.
  */
